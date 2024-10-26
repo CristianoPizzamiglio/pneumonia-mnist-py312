@@ -1,0 +1,8 @@
+# Image size: square, pixels (Integer > 0)
+image_size: 150
+
+# Epoch count (Integer > 0)
+epoch_count: 20
+
+# Batch size (Integer > 0)
+batch_size: 32
