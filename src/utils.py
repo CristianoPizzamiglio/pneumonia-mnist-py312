@@ -1,6 +1,10 @@
+from __future__ import annotations
+
+import datetime
+import os
 import random
 from pathlib import Path
-from typing import Any, Dict
+from typing import Any, Dict, List
 
 import numpy as np
 import tensorflow as tf
@@ -43,3 +47,30 @@ def to_dict(path: Path) -> Dict[Any, Any]:
 
     except IOError:
         raise IOError()
+
+
+# TODO Add `export_dir` param
+def get_callbacks(label: str) -> List:
+    """
+    Get callbacks.
+
+    Parameters
+    ----------
+    label : str
+
+    Returns
+    -------
+    List
+
+    """
+    logdir = os.path.join(
+        rf"..\hyperparameter_tuning\{label}_runs",
+        datetime.datetime.now().strftime("%Y%m%d-%H%M%S"),
+    )
+    tensorboard_callback = tf.keras.callbacks.TensorBoard(logdir, histogram_freq=1)
+    model_checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(
+        filepath=rf"..\hyperparameter_tuning\{label}.keras",
+        monitor="val_accuracy",
+        save_best_only=True,
+    )
+    return [tensorboard_callback, model_checkpoint_callback]

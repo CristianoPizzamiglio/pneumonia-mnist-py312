@@ -1,4 +1,7 @@
-# Image size: square, pixels (Integer > 0)
+# Model mode (Integer, Simple model from scratch = 0, Pre-trained = 1)
+mode: 0
+
+# Image size: square, pixels, for pre-trained model (Integer > 0)
 image_size: 150
 
 # Epoch count (Integer > 0)

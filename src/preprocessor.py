@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import functools
+from types import SimpleNamespace
 from typing import Tuple, Callable
 
 import tensorflow as tf
@@ -14,16 +15,13 @@ from utils import set_seed_
 set_seed_()
 
 
-def compute_datasets(
-    image_size: int, batch_size: int
-) -> Tuple[Dataset, Dataset, Dataset]:
+def compute_datasets(params: SimpleNamespace) -> Tuple[Dataset, Dataset, Dataset]:
     """
     Preprocess data.
 
     Parameters
     ----------
-    image_size : int
-    batch_size : int
+    params : SimpleNamespace
 
     Returns
     -------
@@ -34,17 +32,24 @@ def compute_datasets(
         "pneumonia_mnist", split=["train", "val", "test"], as_supervised=True
     )
 
-    image_size = [image_size, image_size]
-    preprocess_image_ = functools.partial(preprocess_image, target_size=image_size)
+    if params.mode == 0:
+        preprocess_image_ = preprocess_image_simple_model
+    else:
+        image_size = [params.image_size, params.image_size]
+        preprocess_image_ = functools.partial(
+            preprocess_image_pre_trained_model, target_size=image_size
+        )
 
     training_dataset = preprocess_dataset(
-        training_dataset, preprocess_image_, batch_size
+        training_dataset, preprocess_image_, params.batch_size
     )
     training_dataset = augment_data(training_dataset)
     validation_dataset = preprocess_dataset(
-        validation_dataset, preprocess_image_, batch_size
+        validation_dataset, preprocess_image_, params.batch_size
     )
-    test_dataset = preprocess_dataset(test_dataset, preprocess_image_, batch_size)
+    test_dataset = preprocess_dataset(
+        test_dataset, preprocess_image_, params.batch_size
+    )
 
     return training_dataset, validation_dataset, test_dataset
 
@@ -72,11 +77,11 @@ def preprocess_dataset(
     return dataset.batch(batch_size).prefetch(tf.data.experimental.AUTOTUNE)
 
 
-def preprocess_image(
+def preprocess_image_pre_trained_model(
     image: tf.Tensor, label: tf.Tensor, target_size: Tuple[int, int]
 ) -> Tuple[tf.Tensor, tf.Tensor]:
     """
-    Preprocess image.
+    Preprocess image for the pre-trained model.
 
     Parameters
     ----------
@@ -92,6 +97,26 @@ def preprocess_image(
     image /= 255
     image = tf.image.resize(image, target_size)
     image = tf.image.grayscale_to_rgb(image)
+    return image, label
+
+
+def preprocess_image_simple_model(
+    image: tf.Tensor, label: tf.Tensor
+) -> Tuple[tf.Tensor, tf.Tensor]:
+    """
+    Preprocess image.
+
+    Parameters
+    ----------
+    image : tf.Tensor
+    label : tf.Tensor
+
+    Returns
+    -------
+    Tuple[tf.Tensor, tf.Tensor]
+
+    """
+    image /= 255
     return image, label
 
 

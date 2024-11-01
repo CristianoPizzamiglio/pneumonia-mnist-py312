@@ -5,6 +5,7 @@ from types import SimpleNamespace
 
 import tensorflow as tf
 
+from builder import mode_to_label
 from preprocessor import compute_datasets
 from utils import set_seed_, to_dict
 
@@ -21,9 +22,10 @@ def main(params: SimpleNamespace) -> None:
 
     """
 
-    _, _, test_dataset = compute_datasets(params.image_size, params.batch_size)
+    _, _, test_dataset = compute_datasets(params)
 
-    model = tf.keras.models.load_model(r"..\training\model.keras")
+    label = mode_to_label[params.mode]
+    model = tf.keras.models.load_model(rf"..\training\{label}.keras")
     metric_to_value = model.evaluate(test_dataset, return_dict=True)
     print(metric_to_value)
 

@@ -1,0 +1,1084 @@
+C:\Users\Cristiano\venvs\tensorflow-py312\Scripts\python.exe C:\Users\Cristiano\Desktop\home\repos\python\medmnist\pneumonia-mnist-py312\src\hyperparameter_tuner.py 
+2024-11-01 01:31:16.552998: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-11-01 01:31:18.277138: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-11-01 01:31:27.794020: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+C:\Users\Cristiano\venvs\tensorflow-py312\Lib\site-packages\keras\src\layers\convolutional\base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+Search space summary
+Default search space size: 5
+learning_rate (Choice)
+{'default': 0.0001, 'conditions': [], 'values': [0.0001, 0.001, 0.01], 'ordered': True}
+convolutional_layer_count (Choice)
+{'default': 1, 'conditions': [], 'values': [1, 2, 3], 'ordered': True}
+convolutional_first_layer_filter_count (Choice)
+{'default': 16, 'conditions': [], 'values': [16, 32, 48, 64], 'ordered': True}
+dropout (Choice)
+{'default': 0.1, 'conditions': [], 'values': [0.1, 0.2, 0.3, 0.4, 0.5], 'ordered': True}
+dense_layer_neuron_count (Choice)
+{'default': 256, 'conditions': [], 'values': [256, 512, 1024], 'ordered': True}
+
+Search: Running Trial #1
+
+Value             |Best Value So Far |Hyperparameter
+0.001             |0.001             |learning_rate
+1                 |1                 |convolutional_layer_count
+64                |64                |convolutional_first_layer_filter_count
+0.2               |0.2               |dropout
+256               |256               |dense_layer_neuron_count
+3                 |3                 |tuner/epochs
+0                 |0                 |tuner/initial_epoch
+2                 |2                 |tuner/bracket
+0                 |0                 |tuner/round
+
+WARNING:tensorflow:From C:\Users\Cristiano\venvs\tensorflow-py312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+WARNING:tensorflow:From C:\Users\Cristiano\venvs\tensorflow-py312\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+Epoch 1/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 15s 88ms/step - accuracy: 0.7955 - loss: 0.4346 - val_accuracy: 0.9275 - val_loss: 0.2198
+Epoch 2/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 13s 68ms/step - accuracy: 0.9006 - loss: 0.2417 - val_accuracy: 0.9351 - val_loss: 0.1792
+Epoch 3/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 10s 68ms/step - accuracy: 0.9130 - loss: 0.2154 - val_accuracy: 0.9389 - val_loss: 0.1658
+WARNING:tensorflow:From C:\Users\Cristiano\venvs\tensorflow-py312\Lib\site-packages\tensorboard\plugins\hparams\summary.py:190: The name tf.Summary is deprecated. Please use tf.compat.v1.Summary instead.
+
+WARNING:tensorflow:From C:\Users\Cristiano\venvs\tensorflow-py312\Lib\site-packages\tensorboard\plugins\hparams\summary.py:190: The name tf.Summary is deprecated. Please use tf.compat.v1.Summary instead.
+
+
+Trial 1 Complete [00h 00m 40s]
+val_accuracy: 0.9389312863349915
+
+Best val_accuracy So Far: 0.9389312863349915
+Total elapsed time: 00h 00m 40s
+
+Search: Running Trial #2
+
+Value             |Best Value So Far |Hyperparameter
+0.01              |0.001             |learning_rate
+3                 |1                 |convolutional_layer_count
+48                |64                |convolutional_first_layer_filter_count
+0.5               |0.2               |dropout
+1024              |256               |dense_layer_neuron_count
+3                 |3                 |tuner/epochs
+0                 |0                 |tuner/initial_epoch
+2                 |2                 |tuner/bracket
+0                 |0                 |tuner/round
+
+Epoch 1/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 6s 25ms/step - accuracy: 0.7141 - loss: 0.6158 - val_accuracy: 0.7424 - val_loss: 0.5683
+Epoch 2/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 4s 25ms/step - accuracy: 0.7389 - loss: 0.5783 - val_accuracy: 0.7424 - val_loss: 0.5723
+Epoch 3/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 4s 27ms/step - accuracy: 0.7389 - loss: 0.5791 - val_accuracy: 0.7424 - val_loss: 0.5708
+
+Trial 2 Complete [00h 00m 15s]
+val_accuracy: 0.7423664331436157
+
+Best val_accuracy So Far: 0.9389312863349915
+Total elapsed time: 00h 00m 55s
+
+Search: Running Trial #3
+
+Value             |Best Value So Far |Hyperparameter
+0.001             |0.001             |learning_rate
+3                 |1                 |convolutional_layer_count
+32                |64                |convolutional_first_layer_filter_count
+0.1               |0.2               |dropout
+512               |256               |dense_layer_neuron_count
+3                 |3                 |tuner/epochs
+0                 |0                 |tuner/initial_epoch
+2                 |2                 |tuner/bracket
+0                 |0                 |tuner/round
+
+Epoch 1/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 4s 15ms/step - accuracy: 0.7457 - loss: 0.5670 - val_accuracy: 0.8435 - val_loss: 0.3194
+Epoch 2/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 2s 12ms/step - accuracy: 0.8671 - loss: 0.2956 - val_accuracy: 0.9141 - val_loss: 0.2112
+Epoch 3/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 2s 13ms/step - accuracy: 0.8929 - loss: 0.2440 - val_accuracy: 0.9275 - val_loss: 0.2107
+
+Trial 3 Complete [00h 00m 09s]
+val_accuracy: 0.927480936050415
+
+Best val_accuracy So Far: 0.9389312863349915
+Total elapsed time: 00h 01m 05s
+
+Search: Running Trial #4
+
+Value             |Best Value So Far |Hyperparameter
+0.001             |0.001             |learning_rate
+1                 |1                 |convolutional_layer_count
+32                |64                |convolutional_first_layer_filter_count
+0.1               |0.2               |dropout
+256               |256               |dense_layer_neuron_count
+3                 |3                 |tuner/epochs
+0                 |0                 |tuner/initial_epoch
+2                 |2                 |tuner/bracket
+0                 |0                 |tuner/round
+
+Epoch 1/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 6s 35ms/step - accuracy: 0.7641 - loss: 0.5086 - val_accuracy: 0.8950 - val_loss: 0.2295
+Epoch 2/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 5s 35ms/step - accuracy: 0.8874 - loss: 0.2693 - val_accuracy: 0.9332 - val_loss: 0.1965
+Epoch 3/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 5s 35ms/step - accuracy: 0.9035 - loss: 0.2312 - val_accuracy: 0.9351 - val_loss: 0.1890
+
+Trial 4 Complete [00h 00m 17s]
+val_accuracy: 0.9351145029067993
+
+Best val_accuracy So Far: 0.9389312863349915
+Total elapsed time: 00h 01m 22s
+
+Search: Running Trial #5
+
+Value             |Best Value So Far |Hyperparameter
+0.01              |0.001             |learning_rate
+2                 |1                 |convolutional_layer_count
+32                |64                |convolutional_first_layer_filter_count
+0.5               |0.2               |dropout
+512               |256               |dense_layer_neuron_count
+3                 |3                 |tuner/epochs
+0                 |0                 |tuner/initial_epoch
+2                 |2                 |tuner/bracket
+0                 |0                 |tuner/round
+
+Epoch 1/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 5s 24ms/step - accuracy: 0.7020 - loss: 0.6596 - val_accuracy: 0.7424 - val_loss: 0.5708
+Epoch 2/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 22ms/step - accuracy: 0.7389 - loss: 0.5771 - val_accuracy: 0.7424 - val_loss: 0.5709
+Epoch 3/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 22ms/step - accuracy: 0.7389 - loss: 0.5766 - val_accuracy: 0.7424 - val_loss: 0.5710
+
+Trial 5 Complete [00h 00m 12s]
+val_accuracy: 0.7423664331436157
+
+Best val_accuracy So Far: 0.9389312863349915
+Total elapsed time: 00h 01m 35s
+
+Search: Running Trial #6
+
+Value             |Best Value So Far |Hyperparameter
+0.01              |0.001             |learning_rate
+2                 |1                 |convolutional_layer_count
+48                |64                |convolutional_first_layer_filter_count
+0.4               |0.2               |dropout
+256               |256               |dense_layer_neuron_count
+3                 |3                 |tuner/epochs
+0                 |0                 |tuner/initial_epoch
+2                 |2                 |tuner/bracket
+0                 |0                 |tuner/round
+
+Epoch 1/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 6s 28ms/step - accuracy: 0.7028 - loss: 0.6690 - val_accuracy: 0.7424 - val_loss: 0.5560
+Epoch 2/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 4s 29ms/step - accuracy: 0.7436 - loss: 0.4963 - val_accuracy: 0.8798 - val_loss: 0.2748
+Epoch 3/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 4s 23ms/step - accuracy: 0.8760 - loss: 0.3062 - val_accuracy: 0.9103 - val_loss: 0.2411
+
+Trial 6 Complete [00h 00m 14s]
+val_accuracy: 0.9103053212165833
+
+Best val_accuracy So Far: 0.9389312863349915
+Total elapsed time: 00h 01m 48s
+
+Search: Running Trial #7
+
+Value             |Best Value So Far |Hyperparameter
+0.0001            |0.001             |learning_rate
+1                 |1                 |convolutional_layer_count
+48                |64                |convolutional_first_layer_filter_count
+0.2               |0.2               |dropout
+256               |256               |dense_layer_neuron_count
+3                 |3                 |tuner/epochs
+0                 |0                 |tuner/initial_epoch
+2                 |2                 |tuner/bracket
+0                 |0                 |tuner/round
+
+Epoch 1/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 8s 45ms/step - accuracy: 0.7466 - loss: 0.5294 - val_accuracy: 0.9027 - val_loss: 0.3655
+Epoch 2/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 6s 42ms/step - accuracy: 0.8585 - loss: 0.3446 - val_accuracy: 0.8950 - val_loss: 0.3101
+Epoch 3/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 6s 42ms/step - accuracy: 0.8931 - loss: 0.2787 - val_accuracy: 0.8664 - val_loss: 0.3319
+
+Trial 7 Complete [00h 00m 21s]
+val_accuracy: 0.902671754360199
+
+Best val_accuracy So Far: 0.9389312863349915
+Total elapsed time: 00h 02m 09s
+
+Search: Running Trial #8
+
+Value             |Best Value So Far |Hyperparameter
+0.01              |0.001             |learning_rate
+1                 |1                 |convolutional_layer_count
+32                |64                |convolutional_first_layer_filter_count
+0.5               |0.2               |dropout
+1024              |256               |dense_layer_neuron_count
+3                 |3                 |tuner/epochs
+0                 |0                 |tuner/initial_epoch
+2                 |2                 |tuner/bracket
+0                 |0                 |tuner/round
+
+Epoch 1/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 28s 181ms/step - accuracy: 0.7661 - loss: 0.9156 - val_accuracy: 0.8969 - val_loss: 0.2709
+Epoch 2/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 19s 123ms/step - accuracy: 0.8862 - loss: 0.2861 - val_accuracy: 0.9179 - val_loss: 0.2039
+Epoch 3/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 17s 113ms/step - accuracy: 0.8820 - loss: 0.2775 - val_accuracy: 0.9027 - val_loss: 0.2489
+
+Trial 8 Complete [00h 01m 05s]
+val_accuracy: 0.9179389476776123
+
+Best val_accuracy So Far: 0.9389312863349915
+Total elapsed time: 00h 03m 14s
+
+Search: Running Trial #9
+
+Value             |Best Value So Far |Hyperparameter
+0.01              |0.001             |learning_rate
+2                 |1                 |convolutional_layer_count
+16                |64                |convolutional_first_layer_filter_count
+0.1               |0.2               |dropout
+1024              |256               |dense_layer_neuron_count
+3                 |3                 |tuner/epochs
+0                 |0                 |tuner/initial_epoch
+2                 |2                 |tuner/bracket
+0                 |0                 |tuner/round
+
+Epoch 1/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 6s 22ms/step - accuracy: 0.7121 - loss: 0.6507 - val_accuracy: 0.8855 - val_loss: 0.2626
+Epoch 2/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 18ms/step - accuracy: 0.8841 - loss: 0.2805 - val_accuracy: 0.8550 - val_loss: 0.3136
+Epoch 3/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 20ms/step - accuracy: 0.8963 - loss: 0.2587 - val_accuracy: 0.8740 - val_loss: 0.2906
+
+Trial 9 Complete [00h 00m 13s]
+val_accuracy: 0.885496199131012
+
+Best val_accuracy So Far: 0.9389312863349915
+Total elapsed time: 00h 03m 27s
+
+Search: Running Trial #10
+
+Value             |Best Value So Far |Hyperparameter
+0.01              |0.001             |learning_rate
+1                 |1                 |convolutional_layer_count
+64                |64                |convolutional_first_layer_filter_count
+0.4               |0.2               |dropout
+256               |256               |dense_layer_neuron_count
+3                 |3                 |tuner/epochs
+0                 |0                 |tuner/initial_epoch
+2                 |2                 |tuner/bracket
+0                 |0                 |tuner/round
+
+Epoch 1/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 11s 63ms/step - accuracy: 0.7589 - loss: 0.7776 - val_accuracy: 0.8912 - val_loss: 0.2355
+Epoch 2/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 9s 63ms/step - accuracy: 0.8861 - loss: 0.2830 - val_accuracy: 0.8931 - val_loss: 0.2447
+Epoch 3/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 10s 65ms/step - accuracy: 0.8956 - loss: 0.2585 - val_accuracy: 0.9008 - val_loss: 0.2101
+
+Trial 10 Complete [00h 00m 30s]
+val_accuracy: 0.9007633328437805
+
+Best val_accuracy So Far: 0.9389312863349915
+Total elapsed time: 00h 03m 57s
+
+Search: Running Trial #11
+
+Value             |Best Value So Far |Hyperparameter
+0.001             |0.001             |learning_rate
+2                 |1                 |convolutional_layer_count
+32                |64                |convolutional_first_layer_filter_count
+0.1               |0.2               |dropout
+512               |256               |dense_layer_neuron_count
+3                 |3                 |tuner/epochs
+0                 |0                 |tuner/initial_epoch
+2                 |2                 |tuner/bracket
+0                 |0                 |tuner/round
+
+Epoch 1/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 6s 26ms/step - accuracy: 0.7881 - loss: 0.4627 - val_accuracy: 0.9256 - val_loss: 0.1975
+Epoch 2/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 4s 28ms/step - accuracy: 0.9002 - loss: 0.2394 - val_accuracy: 0.9313 - val_loss: 0.1891
+Epoch 3/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 4s 27ms/step - accuracy: 0.9098 - loss: 0.2206 - val_accuracy: 0.9351 - val_loss: 0.1784
+
+Trial 11 Complete [00h 00m 15s]
+val_accuracy: 0.9351145029067993
+
+Best val_accuracy So Far: 0.9389312863349915
+Total elapsed time: 00h 04m 12s
+
+Search: Running Trial #12
+
+Value             |Best Value So Far |Hyperparameter
+0.01              |0.001             |learning_rate
+1                 |1                 |convolutional_layer_count
+48                |64                |convolutional_first_layer_filter_count
+0.4               |0.2               |dropout
+1024              |256               |dense_layer_neuron_count
+3                 |3                 |tuner/epochs
+0                 |0                 |tuner/initial_epoch
+2                 |2                 |tuner/bracket
+0                 |0                 |tuner/round
+
+Epoch 1/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 38s 250ms/step - accuracy: 0.7510 - loss: 1.5546 - val_accuracy: 0.9065 - val_loss: 0.2220
+Epoch 2/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 32s 208ms/step - accuracy: 0.8703 - loss: 0.2958 - val_accuracy: 0.8779 - val_loss: 0.2674
+Epoch 3/3
+148/148 ━━━━━━━━━━━━━━━━━━━━ 28s 191ms/step - accuracy: 0.8728 - loss: 0.2849 - val_accuracy: 0.9103 - val_loss: 0.2188
+
+Trial 12 Complete [00h 01m 42s]
+val_accuracy: 0.9103053212165833
+
+Best val_accuracy So Far: 0.9389312863349915
+Total elapsed time: 00h 05m 53s
+
+Search: Running Trial #13
+
+Value             |Best Value So Far |Hyperparameter
+0.001             |0.001             |learning_rate
+1                 |1                 |convolutional_layer_count
+64                |64                |convolutional_first_layer_filter_count
+0.2               |0.2               |dropout
+256               |256               |dense_layer_neuron_count
+7                 |3                 |tuner/epochs
+3                 |0                 |tuner/initial_epoch
+2                 |2                 |tuner/bracket
+1                 |0                 |tuner/round
+0000              |None              |tuner/trial_id
+
+C:\Users\Cristiano\venvs\tensorflow-py312\Lib\site-packages\keras\src\saving\saving_lib.py:719: UserWarning: Skipping variable loading for optimizer 'adam', because it has 2 variables whereas the saved optimizer has 14 variables. 
+  saveable.load_own_variables(weights_store.get(inner_path))
+Epoch 4/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 13s 74ms/step - accuracy: 0.9171 - loss: 0.2046 - val_accuracy: 0.9275 - val_loss: 0.2010
+Epoch 5/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 10s 66ms/step - accuracy: 0.9264 - loss: 0.1959 - val_accuracy: 0.9141 - val_loss: 0.2257
+Epoch 6/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 9s 58ms/step - accuracy: 0.9171 - loss: 0.1962 - val_accuracy: 0.9160 - val_loss: 0.2128
+Epoch 7/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 10s 64ms/step - accuracy: 0.9246 - loss: 0.1911 - val_accuracy: 0.8969 - val_loss: 0.2468
+
+Trial 13 Complete [00h 00m 46s]
+val_accuracy: 0.927480936050415
+
+Best val_accuracy So Far: 0.9389312863349915
+Total elapsed time: 00h 06m 40s
+
+Search: Running Trial #14
+
+Value             |Best Value So Far |Hyperparameter
+0.001             |0.001             |learning_rate
+1                 |1                 |convolutional_layer_count
+32                |64                |convolutional_first_layer_filter_count
+0.1               |0.2               |dropout
+256               |256               |dense_layer_neuron_count
+7                 |3                 |tuner/epochs
+3                 |0                 |tuner/initial_epoch
+2                 |2                 |tuner/bracket
+1                 |0                 |tuner/round
+0003              |None              |tuner/trial_id
+
+Epoch 4/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 7s 38ms/step - accuracy: 0.9091 - loss: 0.2249 - val_accuracy: 0.9275 - val_loss: 0.1806
+Epoch 5/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 5s 33ms/step - accuracy: 0.9155 - loss: 0.2051 - val_accuracy: 0.9427 - val_loss: 0.1675
+Epoch 6/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 5s 31ms/step - accuracy: 0.9180 - loss: 0.2005 - val_accuracy: 0.8893 - val_loss: 0.2565
+Epoch 7/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 4s 28ms/step - accuracy: 0.9219 - loss: 0.1954 - val_accuracy: 0.8626 - val_loss: 0.3267
+
+Trial 14 Complete [00h 00m 22s]
+val_accuracy: 0.9427480697631836
+
+Best val_accuracy So Far: 0.9427480697631836
+Total elapsed time: 00h 07m 01s
+
+Search: Running Trial #15
+
+Value             |Best Value So Far |Hyperparameter
+0.001             |0.001             |learning_rate
+2                 |1                 |convolutional_layer_count
+32                |32                |convolutional_first_layer_filter_count
+0.1               |0.1               |dropout
+512               |256               |dense_layer_neuron_count
+7                 |7                 |tuner/epochs
+3                 |3                 |tuner/initial_epoch
+2                 |2                 |tuner/bracket
+1                 |1                 |tuner/round
+0010              |0003              |tuner/trial_id
+
+C:\Users\Cristiano\venvs\tensorflow-py312\Lib\site-packages\keras\src\saving\saving_lib.py:719: UserWarning: Skipping variable loading for optimizer 'adam', because it has 2 variables whereas the saved optimizer has 18 variables. 
+  saveable.load_own_variables(weights_store.get(inner_path))
+Epoch 4/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 9s 46ms/step - accuracy: 0.9140 - loss: 0.2092 - val_accuracy: 0.9275 - val_loss: 0.1849
+Epoch 5/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 4s 26ms/step - accuracy: 0.9278 - loss: 0.1981 - val_accuracy: 0.8950 - val_loss: 0.2361
+Epoch 6/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 4s 23ms/step - accuracy: 0.9227 - loss: 0.1899 - val_accuracy: 0.8664 - val_loss: 0.2908
+Epoch 7/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 23ms/step - accuracy: 0.9264 - loss: 0.1964 - val_accuracy: 0.8798 - val_loss: 0.2762
+
+Trial 15 Complete [00h 00m 21s]
+val_accuracy: 0.927480936050415
+
+Best val_accuracy So Far: 0.9427480697631836
+Total elapsed time: 00h 07m 22s
+
+Search: Running Trial #16
+
+Value             |Best Value So Far |Hyperparameter
+0.001             |0.001             |learning_rate
+3                 |1                 |convolutional_layer_count
+32                |32                |convolutional_first_layer_filter_count
+0.1               |0.1               |dropout
+512               |256               |dense_layer_neuron_count
+7                 |7                 |tuner/epochs
+3                 |3                 |tuner/initial_epoch
+2                 |2                 |tuner/bracket
+1                 |1                 |tuner/round
+0002              |0003              |tuner/trial_id
+
+C:\Users\Cristiano\venvs\tensorflow-py312\Lib\site-packages\keras\src\saving\saving_lib.py:719: UserWarning: Skipping variable loading for optimizer 'adam', because it has 2 variables whereas the saved optimizer has 22 variables. 
+  saveable.load_own_variables(weights_store.get(inner_path))
+Epoch 4/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 5s 19ms/step - accuracy: 0.8971 - loss: 0.2420 - val_accuracy: 0.9122 - val_loss: 0.2067
+Epoch 5/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 2s 14ms/step - accuracy: 0.9133 - loss: 0.2097 - val_accuracy: 0.9198 - val_loss: 0.1851
+Epoch 6/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 2s 14ms/step - accuracy: 0.9188 - loss: 0.2018 - val_accuracy: 0.9103 - val_loss: 0.2109
+Epoch 7/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 2s 12ms/step - accuracy: 0.9187 - loss: 0.1963 - val_accuracy: 0.8969 - val_loss: 0.2452
+
+Trial 16 Complete [00h 00m 11s]
+val_accuracy: 0.919847309589386
+
+Best val_accuracy So Far: 0.9427480697631836
+Total elapsed time: 00h 07m 34s
+
+Search: Running Trial #17
+
+Value             |Best Value So Far |Hyperparameter
+0.001             |0.001             |learning_rate
+1                 |1                 |convolutional_layer_count
+32                |32                |convolutional_first_layer_filter_count
+0.1               |0.1               |dropout
+256               |256               |dense_layer_neuron_count
+20                |7                 |tuner/epochs
+7                 |3                 |tuner/initial_epoch
+2                 |2                 |tuner/bracket
+2                 |1                 |tuner/round
+0013              |0003              |tuner/trial_id
+
+Epoch 8/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 6s 35ms/step - accuracy: 0.9088 - loss: 0.2165 - val_accuracy: 0.9008 - val_loss: 0.2397
+Epoch 9/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 5s 34ms/step - accuracy: 0.9260 - loss: 0.1951 - val_accuracy: 0.8855 - val_loss: 0.2664
+Epoch 10/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 5s 33ms/step - accuracy: 0.9215 - loss: 0.1926 - val_accuracy: 0.9141 - val_loss: 0.2154
+Epoch 11/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 5s 30ms/step - accuracy: 0.9272 - loss: 0.1822 - val_accuracy: 0.8511 - val_loss: 0.3369
+Epoch 12/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 5s 30ms/step - accuracy: 0.9284 - loss: 0.1896 - val_accuracy: 0.8836 - val_loss: 0.2778
+Epoch 13/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 4s 29ms/step - accuracy: 0.9278 - loss: 0.1773 - val_accuracy: 0.8989 - val_loss: 0.2289
+Epoch 14/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 5s 32ms/step - accuracy: 0.9380 - loss: 0.1666 - val_accuracy: 0.9046 - val_loss: 0.2533
+Epoch 15/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 5s 36ms/step - accuracy: 0.9362 - loss: 0.1789 - val_accuracy: 0.8626 - val_loss: 0.3059
+
+Trial 17 Complete [00h 00m 41s]
+val_accuracy: 0.9141221642494202
+
+Best val_accuracy So Far: 0.9427480697631836
+Total elapsed time: 00h 08m 15s
+
+Search: Running Trial #18
+
+Value             |Best Value So Far |Hyperparameter
+0.001             |0.001             |learning_rate
+1                 |1                 |convolutional_layer_count
+64                |32                |convolutional_first_layer_filter_count
+0.2               |0.1               |dropout
+256               |256               |dense_layer_neuron_count
+20                |7                 |tuner/epochs
+7                 |3                 |tuner/initial_epoch
+2                 |2                 |tuner/bracket
+2                 |1                 |tuner/round
+0012              |0003              |tuner/trial_id
+
+Epoch 8/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 10s 62ms/step - accuracy: 0.9227 - loss: 0.2027 - val_accuracy: 0.9351 - val_loss: 0.1753
+Epoch 9/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 9s 57ms/step - accuracy: 0.9324 - loss: 0.1835 - val_accuracy: 0.9332 - val_loss: 0.1733
+Epoch 10/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 8s 55ms/step - accuracy: 0.9278 - loss: 0.1881 - val_accuracy: 0.9046 - val_loss: 0.2182
+Epoch 11/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 8s 56ms/step - accuracy: 0.9296 - loss: 0.1816 - val_accuracy: 0.9275 - val_loss: 0.1978
+Epoch 12/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 8s 56ms/step - accuracy: 0.9273 - loss: 0.1695 - val_accuracy: 0.9141 - val_loss: 0.2172
+Epoch 13/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 8s 56ms/step - accuracy: 0.9352 - loss: 0.1664 - val_accuracy: 0.9179 - val_loss: 0.2217
+
+Trial 18 Complete [00h 00m 53s]
+val_accuracy: 0.9351145029067993
+
+Best val_accuracy So Far: 0.9427480697631836
+Total elapsed time: 00h 09m 08s
+
+Search: Running Trial #19
+
+Value             |Best Value So Far |Hyperparameter
+0.01              |0.001             |learning_rate
+1                 |1                 |convolutional_layer_count
+64                |32                |convolutional_first_layer_filter_count
+0.2               |0.1               |dropout
+512               |256               |dense_layer_neuron_count
+7                 |7                 |tuner/epochs
+0                 |3                 |tuner/initial_epoch
+1                 |2                 |tuner/bracket
+0                 |1                 |tuner/round
+
+Epoch 1/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 22s 138ms/step - accuracy: 0.6911 - loss: 1.0323 - val_accuracy: 0.8855 - val_loss: 0.2648
+Epoch 2/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 18s 119ms/step - accuracy: 0.8891 - loss: 0.2846 - val_accuracy: 0.9237 - val_loss: 0.2213
+Epoch 3/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 16s 107ms/step - accuracy: 0.8991 - loss: 0.2481 - val_accuracy: 0.8912 - val_loss: 0.2780
+Epoch 4/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 18s 121ms/step - accuracy: 0.9015 - loss: 0.2446 - val_accuracy: 0.8874 - val_loss: 0.2637
+Epoch 5/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 18s 124ms/step - accuracy: 0.8993 - loss: 0.2349 - val_accuracy: 0.8645 - val_loss: 0.2989
+Epoch 6/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 17s 114ms/step - accuracy: 0.9177 - loss: 0.2168 - val_accuracy: 0.8817 - val_loss: 0.2800
+Epoch 7/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 17s 117ms/step - accuracy: 0.9085 - loss: 0.2194 - val_accuracy: 0.8893 - val_loss: 0.2568
+
+Trial 19 Complete [00h 02m 07s]
+val_accuracy: 0.9236640930175781
+
+Best val_accuracy So Far: 0.9427480697631836
+Total elapsed time: 00h 11m 15s
+
+Search: Running Trial #20
+
+Value             |Best Value So Far |Hyperparameter
+0.001             |0.001             |learning_rate
+2                 |1                 |convolutional_layer_count
+16                |32                |convolutional_first_layer_filter_count
+0.2               |0.1               |dropout
+1024              |256               |dense_layer_neuron_count
+7                 |7                 |tuner/epochs
+0                 |3                 |tuner/initial_epoch
+1                 |2                 |tuner/bracket
+0                 |1                 |tuner/round
+
+Epoch 1/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 5s 22ms/step - accuracy: 0.7712 - loss: 0.4690 - val_accuracy: 0.9084 - val_loss: 0.2131
+Epoch 2/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 21ms/step - accuracy: 0.9111 - loss: 0.2272 - val_accuracy: 0.9313 - val_loss: 0.1778
+Epoch 3/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 20ms/step - accuracy: 0.9101 - loss: 0.2230 - val_accuracy: 0.9103 - val_loss: 0.2297
+Epoch 4/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 20ms/step - accuracy: 0.9161 - loss: 0.2098 - val_accuracy: 0.9065 - val_loss: 0.2203
+Epoch 5/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 20ms/step - accuracy: 0.9184 - loss: 0.2053 - val_accuracy: 0.8989 - val_loss: 0.2173
+Epoch 6/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 20ms/step - accuracy: 0.9228 - loss: 0.1937 - val_accuracy: 0.8817 - val_loss: 0.2551
+Epoch 7/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 20ms/step - accuracy: 0.9351 - loss: 0.1706 - val_accuracy: 0.8874 - val_loss: 0.2633
+
+Trial 20 Complete [00h 00m 25s]
+val_accuracy: 0.9312977194786072
+
+Best val_accuracy So Far: 0.9427480697631836
+Total elapsed time: 00h 11m 40s
+
+Search: Running Trial #21
+
+Value             |Best Value So Far |Hyperparameter
+0.0001            |0.001             |learning_rate
+3                 |1                 |convolutional_layer_count
+32                |32                |convolutional_first_layer_filter_count
+0.5               |0.1               |dropout
+1024              |256               |dense_layer_neuron_count
+7                 |7                 |tuner/epochs
+0                 |3                 |tuner/initial_epoch
+1                 |2                 |tuner/bracket
+0                 |1                 |tuner/round
+
+Epoch 1/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 4s 16ms/step - accuracy: 0.7247 - loss: 0.6186 - val_accuracy: 0.7424 - val_loss: 0.5433
+Epoch 2/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 2s 14ms/step - accuracy: 0.7422 - loss: 0.5280 - val_accuracy: 0.8263 - val_loss: 0.4223
+Epoch 3/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 2s 13ms/step - accuracy: 0.8192 - loss: 0.3892 - val_accuracy: 0.8130 - val_loss: 0.4236
+Epoch 4/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 2s 13ms/step - accuracy: 0.8629 - loss: 0.3184 - val_accuracy: 0.7958 - val_loss: 0.4474
+Epoch 5/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 2s 14ms/step - accuracy: 0.8764 - loss: 0.2855 - val_accuracy: 0.8378 - val_loss: 0.3705
+Epoch 6/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 2s 16ms/step - accuracy: 0.8920 - loss: 0.2550 - val_accuracy: 0.8073 - val_loss: 0.4359
+Epoch 7/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 4s 24ms/step - accuracy: 0.8914 - loss: 0.2631 - val_accuracy: 0.8569 - val_loss: 0.3243
+
+Trial 21 Complete [00h 00m 19s]
+val_accuracy: 0.8568702340126038
+
+Best val_accuracy So Far: 0.9427480697631836
+Total elapsed time: 00h 12m 00s
+
+Search: Running Trial #22
+
+Value             |Best Value So Far |Hyperparameter
+0.01              |0.001             |learning_rate
+3                 |1                 |convolutional_layer_count
+64                |32                |convolutional_first_layer_filter_count
+0.4               |0.1               |dropout
+1024              |256               |dense_layer_neuron_count
+7                 |7                 |tuner/epochs
+0                 |3                 |tuner/initial_epoch
+1                 |2                 |tuner/bracket
+0                 |1                 |tuner/round
+
+Epoch 1/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 10s 53ms/step - accuracy: 0.7020 - loss: 0.6686 - val_accuracy: 0.7424 - val_loss: 0.5541
+Epoch 2/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 6s 38ms/step - accuracy: 0.7398 - loss: 0.5584 - val_accuracy: 0.6641 - val_loss: 0.5616
+Epoch 3/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 6s 39ms/step - accuracy: 0.8599 - loss: 0.3315 - val_accuracy: 0.9065 - val_loss: 0.2286
+Epoch 4/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 6s 39ms/step - accuracy: 0.8883 - loss: 0.2704 - val_accuracy: 0.8931 - val_loss: 0.2439
+Epoch 5/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 7s 44ms/step - accuracy: 0.8839 - loss: 0.2591 - val_accuracy: 0.9046 - val_loss: 0.2102
+Epoch 6/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 6s 41ms/step - accuracy: 0.8921 - loss: 0.2540 - val_accuracy: 0.9046 - val_loss: 0.2304
+Epoch 7/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 7s 49ms/step - accuracy: 0.8898 - loss: 0.2547 - val_accuracy: 0.9179 - val_loss: 0.2206
+
+Trial 22 Complete [00h 00m 48s]
+val_accuracy: 0.9179389476776123
+
+Best val_accuracy So Far: 0.9427480697631836
+Total elapsed time: 00h 12m 48s
+
+Search: Running Trial #23
+
+Value             |Best Value So Far |Hyperparameter
+0.01              |0.001             |learning_rate
+2                 |1                 |convolutional_layer_count
+16                |32                |convolutional_first_layer_filter_count
+0.4               |0.1               |dropout
+1024              |256               |dense_layer_neuron_count
+7                 |7                 |tuner/epochs
+0                 |3                 |tuner/initial_epoch
+1                 |2                 |tuner/bracket
+0                 |1                 |tuner/round
+
+Epoch 1/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 9s 38ms/step - accuracy: 0.7292 - loss: 0.6488 - val_accuracy: 0.8874 - val_loss: 0.2710
+Epoch 2/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 5s 33ms/step - accuracy: 0.8633 - loss: 0.3102 - val_accuracy: 0.9122 - val_loss: 0.2381
+Epoch 3/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 4s 25ms/step - accuracy: 0.8766 - loss: 0.2938 - val_accuracy: 0.8817 - val_loss: 0.2818
+Epoch 4/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 22ms/step - accuracy: 0.8667 - loss: 0.3021 - val_accuracy: 0.8779 - val_loss: 0.2894
+Epoch 5/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 22ms/step - accuracy: 0.8791 - loss: 0.2812 - val_accuracy: 0.8779 - val_loss: 0.2936
+Epoch 6/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 4s 24ms/step - accuracy: 0.8795 - loss: 0.2784 - val_accuracy: 0.8969 - val_loss: 0.2443
+Epoch 7/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 22ms/step - accuracy: 0.8865 - loss: 0.2732 - val_accuracy: 0.8244 - val_loss: 0.4043
+
+Trial 23 Complete [00h 00m 33s]
+val_accuracy: 0.9122137427330017
+
+Best val_accuracy So Far: 0.9427480697631836
+Total elapsed time: 00h 13m 21s
+
+Search: Running Trial #24
+
+Value             |Best Value So Far |Hyperparameter
+0.001             |0.001             |learning_rate
+3                 |1                 |convolutional_layer_count
+16                |32                |convolutional_first_layer_filter_count
+0.1               |0.1               |dropout
+1024              |256               |dense_layer_neuron_count
+7                 |7                 |tuner/epochs
+0                 |3                 |tuner/initial_epoch
+1                 |2                 |tuner/bracket
+0                 |1                 |tuner/round
+
+Epoch 1/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 4s 12ms/step - accuracy: 0.7473 - loss: 0.5579 - val_accuracy: 0.8569 - val_loss: 0.3005
+Epoch 2/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 2s 11ms/step - accuracy: 0.8591 - loss: 0.3171 - val_accuracy: 0.8931 - val_loss: 0.2567
+Epoch 3/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 1s 9ms/step - accuracy: 0.8981 - loss: 0.2527 - val_accuracy: 0.9008 - val_loss: 0.2226
+Epoch 4/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 2s 11ms/step - accuracy: 0.8948 - loss: 0.2396 - val_accuracy: 0.9313 - val_loss: 0.1774
+Epoch 5/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 1s 8ms/step - accuracy: 0.9068 - loss: 0.2279 - val_accuracy: 0.9256 - val_loss: 0.1775
+Epoch 6/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 1s 8ms/step - accuracy: 0.9237 - loss: 0.1986 - val_accuracy: 0.9160 - val_loss: 0.1990
+Epoch 7/7
+148/148 ━━━━━━━━━━━━━━━━━━━━ 1s 8ms/step - accuracy: 0.9250 - loss: 0.1915 - val_accuracy: 0.9408 - val_loss: 0.1423
+
+Trial 24 Complete [00h 00m 13s]
+val_accuracy: 0.9408397078514099
+
+Best val_accuracy So Far: 0.9427480697631836
+Total elapsed time: 00h 13m 34s
+
+Search: Running Trial #25
+
+Value             |Best Value So Far |Hyperparameter
+0.001             |0.001             |learning_rate
+3                 |1                 |convolutional_layer_count
+16                |32                |convolutional_first_layer_filter_count
+0.1               |0.1               |dropout
+1024              |256               |dense_layer_neuron_count
+20                |7                 |tuner/epochs
+7                 |3                 |tuner/initial_epoch
+1                 |2                 |tuner/bracket
+1                 |1                 |tuner/round
+0023              |0003              |tuner/trial_id
+
+Epoch 8/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 4s 12ms/step - accuracy: 0.9246 - loss: 0.1913 - val_accuracy: 0.9065 - val_loss: 0.2072
+Epoch 9/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 1s 9ms/step - accuracy: 0.9218 - loss: 0.1871 - val_accuracy: 0.9466 - val_loss: 0.1311
+Epoch 10/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 1s 8ms/step - accuracy: 0.9262 - loss: 0.1822 - val_accuracy: 0.8607 - val_loss: 0.3147
+Epoch 11/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 1s 8ms/step - accuracy: 0.9218 - loss: 0.1871 - val_accuracy: 0.9122 - val_loss: 0.2101
+Epoch 12/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 1s 8ms/step - accuracy: 0.9320 - loss: 0.1676 - val_accuracy: 0.8111 - val_loss: 0.4000
+Epoch 13/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 1s 8ms/step - accuracy: 0.9300 - loss: 0.1798 - val_accuracy: 0.8683 - val_loss: 0.2826
+Epoch 14/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 1s 8ms/step - accuracy: 0.9277 - loss: 0.1762 - val_accuracy: 0.8779 - val_loss: 0.2750
+
+Trial 25 Complete [00h 00m 12s]
+val_accuracy: 0.9465649127960205
+
+Best val_accuracy So Far: 0.9465649127960205
+Total elapsed time: 00h 13m 46s
+
+Search: Running Trial #26
+
+Value             |Best Value So Far |Hyperparameter
+0.001             |0.001             |learning_rate
+2                 |3                 |convolutional_layer_count
+16                |16                |convolutional_first_layer_filter_count
+0.2               |0.1               |dropout
+1024              |1024              |dense_layer_neuron_count
+20                |20                |tuner/epochs
+7                 |7                 |tuner/initial_epoch
+1                 |1                 |tuner/bracket
+1                 |1                 |tuner/round
+0019              |0023              |tuner/trial_id
+
+Epoch 8/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 5s 22ms/step - accuracy: 0.9108 - loss: 0.2291 - val_accuracy: 0.9370 - val_loss: 0.1845
+Epoch 9/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 20ms/step - accuracy: 0.9122 - loss: 0.2129 - val_accuracy: 0.8969 - val_loss: 0.2355
+Epoch 10/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 20ms/step - accuracy: 0.9155 - loss: 0.2117 - val_accuracy: 0.8855 - val_loss: 0.2614
+Epoch 11/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 20ms/step - accuracy: 0.9165 - loss: 0.1991 - val_accuracy: 0.9065 - val_loss: 0.2127
+Epoch 12/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 20ms/step - accuracy: 0.9232 - loss: 0.1873 - val_accuracy: 0.9084 - val_loss: 0.2086
+Epoch 13/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 20ms/step - accuracy: 0.9234 - loss: 0.1863 - val_accuracy: 0.8683 - val_loss: 0.3043
+
+Trial 26 Complete [00h 00m 21s]
+val_accuracy: 0.9370229244232178
+
+Best val_accuracy So Far: 0.9465649127960205
+Total elapsed time: 00h 14m 07s
+
+Search: Running Trial #27
+
+Value             |Best Value So Far |Hyperparameter
+0.0001            |0.001             |learning_rate
+3                 |3                 |convolutional_layer_count
+48                |16                |convolutional_first_layer_filter_count
+0.4               |0.1               |dropout
+256               |1024              |dense_layer_neuron_count
+20                |20                |tuner/epochs
+0                 |7                 |tuner/initial_epoch
+0                 |1                 |tuner/bracket
+0                 |1                 |tuner/round
+
+Epoch 1/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 5s 22ms/step - accuracy: 0.7233 - loss: 0.6048 - val_accuracy: 0.7424 - val_loss: 0.5304
+Epoch 2/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 21ms/step - accuracy: 0.7455 - loss: 0.5141 - val_accuracy: 0.8531 - val_loss: 0.3926
+Epoch 3/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 20ms/step - accuracy: 0.8401 - loss: 0.3690 - val_accuracy: 0.8263 - val_loss: 0.4015
+Epoch 4/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 20ms/step - accuracy: 0.8647 - loss: 0.3190 - val_accuracy: 0.8111 - val_loss: 0.4071
+Epoch 5/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 4s 24ms/step - accuracy: 0.8943 - loss: 0.2783 - val_accuracy: 0.8187 - val_loss: 0.3963
+Epoch 6/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 22ms/step - accuracy: 0.8801 - loss: 0.2751 - val_accuracy: 0.7901 - val_loss: 0.4547
+Epoch 7/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 23ms/step - accuracy: 0.8809 - loss: 0.2660 - val_accuracy: 0.8302 - val_loss: 0.3723
+
+Trial 27 Complete [00h 00m 25s]
+val_accuracy: 0.8530534505844116
+
+Best val_accuracy So Far: 0.9465649127960205
+Total elapsed time: 00h 14m 32s
+
+Search: Running Trial #28
+
+Value             |Best Value So Far |Hyperparameter
+0.001             |0.001             |learning_rate
+2                 |3                 |convolutional_layer_count
+16                |16                |convolutional_first_layer_filter_count
+0.3               |0.1               |dropout
+512               |1024              |dense_layer_neuron_count
+20                |20                |tuner/epochs
+0                 |7                 |tuner/initial_epoch
+0                 |1                 |tuner/bracket
+0                 |1                 |tuner/round
+
+Epoch 1/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 4s 17ms/step - accuracy: 0.7643 - loss: 0.4858 - val_accuracy: 0.9122 - val_loss: 0.2301
+Epoch 2/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 2s 13ms/step - accuracy: 0.8958 - loss: 0.2527 - val_accuracy: 0.9160 - val_loss: 0.2296
+Epoch 3/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 2s 13ms/step - accuracy: 0.9073 - loss: 0.2353 - val_accuracy: 0.9198 - val_loss: 0.2091
+Epoch 4/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 2s 12ms/step - accuracy: 0.9059 - loss: 0.2306 - val_accuracy: 0.8569 - val_loss: 0.2951
+Epoch 5/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 2s 13ms/step - accuracy: 0.9139 - loss: 0.2228 - val_accuracy: 0.9294 - val_loss: 0.1830
+Epoch 6/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 2s 12ms/step - accuracy: 0.9127 - loss: 0.2143 - val_accuracy: 0.8397 - val_loss: 0.3370
+Epoch 7/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 2s 12ms/step - accuracy: 0.9096 - loss: 0.2193 - val_accuracy: 0.8912 - val_loss: 0.2467
+Epoch 8/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 2s 12ms/step - accuracy: 0.9146 - loss: 0.2086 - val_accuracy: 0.8912 - val_loss: 0.2492
+Epoch 9/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 2s 12ms/step - accuracy: 0.9193 - loss: 0.1949 - val_accuracy: 0.8874 - val_loss: 0.2619
+Epoch 10/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 2s 11ms/step - accuracy: 0.9305 - loss: 0.1883 - val_accuracy: 0.8779 - val_loss: 0.2749
+
+Trial 28 Complete [00h 00m 22s]
+val_accuracy: 0.9293892979621887
+
+Best val_accuracy So Far: 0.9465649127960205
+Total elapsed time: 00h 14m 54s
+
+Search: Running Trial #29
+
+Value             |Best Value So Far |Hyperparameter
+0.0001            |0.001             |learning_rate
+3                 |3                 |convolutional_layer_count
+16                |16                |convolutional_first_layer_filter_count
+0.2               |0.1               |dropout
+256               |1024              |dense_layer_neuron_count
+20                |20                |tuner/epochs
+0                 |7                 |tuner/initial_epoch
+0                 |1                 |tuner/bracket
+0                 |1                 |tuner/round
+
+Epoch 1/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 3s 10ms/step - accuracy: 0.7343 - loss: 0.6331 - val_accuracy: 0.7424 - val_loss: 0.5572
+Epoch 2/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 1s 7ms/step - accuracy: 0.7389 - loss: 0.5526 - val_accuracy: 0.7424 - val_loss: 0.4969
+Epoch 3/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 1s 8ms/step - accuracy: 0.7556 - loss: 0.4743 - val_accuracy: 0.8435 - val_loss: 0.4036
+Epoch 4/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 1s 7ms/step - accuracy: 0.8527 - loss: 0.3508 - val_accuracy: 0.8263 - val_loss: 0.3987
+Epoch 5/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 1s 8ms/step - accuracy: 0.8649 - loss: 0.3058 - val_accuracy: 0.7824 - val_loss: 0.4405
+Epoch 6/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 1s 7ms/step - accuracy: 0.8872 - loss: 0.2730 - val_accuracy: 0.8130 - val_loss: 0.4068
+Epoch 7/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 1s 7ms/step - accuracy: 0.8894 - loss: 0.2661 - val_accuracy: 0.8111 - val_loss: 0.4128
+Epoch 8/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 1s 9ms/step - accuracy: 0.8980 - loss: 0.2492 - val_accuracy: 0.8034 - val_loss: 0.4310
+
+Trial 29 Complete [00h 00m 12s]
+val_accuracy: 0.8435114622116089
+
+Best val_accuracy So Far: 0.9465649127960205
+Total elapsed time: 00h 15m 07s
+
+Search: Running Trial #30
+
+Value             |Best Value So Far |Hyperparameter
+0.0001            |0.001             |learning_rate
+1                 |3                 |convolutional_layer_count
+64                |16                |convolutional_first_layer_filter_count
+0.4               |0.1               |dropout
+1024              |1024              |dense_layer_neuron_count
+20                |20                |tuner/epochs
+0                 |7                 |tuner/initial_epoch
+0                 |1                 |tuner/bracket
+0                 |1                 |tuner/round
+
+Epoch 1/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 54s 353ms/step - accuracy: 0.7467 - loss: 0.5172 - val_accuracy: 0.8969 - val_loss: 0.3220
+Epoch 2/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 30s 197ms/step - accuracy: 0.8810 - loss: 0.2970 - val_accuracy: 0.8702 - val_loss: 0.3260
+Epoch 3/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 29s 193ms/step - accuracy: 0.8959 - loss: 0.2520 - val_accuracy: 0.8683 - val_loss: 0.3107
+Epoch 4/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 30s 200ms/step - accuracy: 0.9098 - loss: 0.2330 - val_accuracy: 0.8721 - val_loss: 0.2861
+Epoch 5/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 32s 214ms/step - accuracy: 0.9124 - loss: 0.2269 - val_accuracy: 0.8874 - val_loss: 0.2617
+Epoch 6/20
+148/148 ━━━━━━━━━━━━━━━━━━━━ 31s 208ms/step - accuracy: 0.9130 - loss: 0.2200 - val_accuracy: 0.8798 - val_loss: 0.2693
+
+Trial 30 Complete [00h 03m 27s]
+val_accuracy: 0.8969465494155884
+
+Best val_accuracy So Far: 0.9465649127960205
+Total elapsed time: 00h 18m 33s
+Results summary
+Results in ..\hyperparameter_tuning\simple_model
+Showing 10 best trials
+Objective(name="val_accuracy", direction="max")
+
+Trial 0024 summary
+Hyperparameters:
+learning_rate: 0.001
+convolutional_layer_count: 3
+convolutional_first_layer_filter_count: 16
+dropout: 0.1
+dense_layer_neuron_count: 1024
+tuner/epochs: 20
+tuner/initial_epoch: 7
+tuner/bracket: 1
+tuner/round: 1
+tuner/trial_id: 0023
+Score: 0.9465649127960205
+
+Trial 0013 summary
+Hyperparameters:
+learning_rate: 0.001
+convolutional_layer_count: 1
+convolutional_first_layer_filter_count: 32
+dropout: 0.1
+dense_layer_neuron_count: 256
+tuner/epochs: 7
+tuner/initial_epoch: 3
+tuner/bracket: 2
+tuner/round: 1
+tuner/trial_id: 0003
+Score: 0.9427480697631836
+
+Trial 0023 summary
+Hyperparameters:
+learning_rate: 0.001
+convolutional_layer_count: 3
+convolutional_first_layer_filter_count: 16
+dropout: 0.1
+dense_layer_neuron_count: 1024
+tuner/epochs: 7
+tuner/initial_epoch: 0
+tuner/bracket: 1
+tuner/round: 0
+Score: 0.9408397078514099
+
+Trial 0000 summary
+Hyperparameters:
+learning_rate: 0.001
+convolutional_layer_count: 1
+convolutional_first_layer_filter_count: 64
+dropout: 0.2
+dense_layer_neuron_count: 256
+tuner/epochs: 3
+tuner/initial_epoch: 0
+tuner/bracket: 2
+tuner/round: 0
+Score: 0.9389312863349915
+
+Trial 0025 summary
+Hyperparameters:
+learning_rate: 0.001
+convolutional_layer_count: 2
+convolutional_first_layer_filter_count: 16
+dropout: 0.2
+dense_layer_neuron_count: 1024
+tuner/epochs: 20
+tuner/initial_epoch: 7
+tuner/bracket: 1
+tuner/round: 1
+tuner/trial_id: 0019
+Score: 0.9370229244232178
+
+Trial 0003 summary
+Hyperparameters:
+learning_rate: 0.001
+convolutional_layer_count: 1
+convolutional_first_layer_filter_count: 32
+dropout: 0.1
+dense_layer_neuron_count: 256
+tuner/epochs: 3
+tuner/initial_epoch: 0
+tuner/bracket: 2
+tuner/round: 0
+Score: 0.9351145029067993
+
+Trial 0010 summary
+Hyperparameters:
+learning_rate: 0.001
+convolutional_layer_count: 2
+convolutional_first_layer_filter_count: 32
+dropout: 0.1
+dense_layer_neuron_count: 512
+tuner/epochs: 3
+tuner/initial_epoch: 0
+tuner/bracket: 2
+tuner/round: 0
+Score: 0.9351145029067993
+
+Trial 0017 summary
+Hyperparameters:
+learning_rate: 0.001
+convolutional_layer_count: 1
+convolutional_first_layer_filter_count: 64
+dropout: 0.2
+dense_layer_neuron_count: 256
+tuner/epochs: 20
+tuner/initial_epoch: 7
+tuner/bracket: 2
+tuner/round: 2
+tuner/trial_id: 0012
+Score: 0.9351145029067993
+
+Trial 0019 summary
+Hyperparameters:
+learning_rate: 0.001
+convolutional_layer_count: 2
+convolutional_first_layer_filter_count: 16
+dropout: 0.2
+dense_layer_neuron_count: 1024
+tuner/epochs: 7
+tuner/initial_epoch: 0
+tuner/bracket: 1
+tuner/round: 0
+Score: 0.9312977194786072
+
+Trial 0027 summary
+Hyperparameters:
+learning_rate: 0.001
+convolutional_layer_count: 2
+convolutional_first_layer_filter_count: 16
+dropout: 0.3
+dense_layer_neuron_count: 512
+tuner/epochs: 20
+tuner/initial_epoch: 0
+tuner/bracket: 0
+tuner/round: 0
+Score: 0.9293892979621887
+

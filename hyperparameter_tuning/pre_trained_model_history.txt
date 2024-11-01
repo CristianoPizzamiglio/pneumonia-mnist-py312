@@ -1,0 +1,1088 @@
+CUsersCristianovenvstensorflow-py312Scriptspython.exe CUsersCristianoDesktophomerepospythonmedmnistpneumonia-mnist-py312srchyperparameter_tuner.py 
+2024-10-31 085157.411603 I tensorflowcoreutilport.cc113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-10-31 085200.777080 I tensorflowcoreutilport.cc113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-10-31 085214.562772 I tensorflowcoreplatformcpu_feature_guard.cc210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Search space summary
+Default search space size 3
+learning_rate (Choice)
+{'default' 0.0001, 'conditions' [], 'values' [0.0001, 0.001, 0.01], 'ordered' True}
+dropout (Choice)
+{'default' 0.1, 'conditions' [], 'values' [0.1, 0.2, 0.3, 0.4, 0.5], 'ordered' True}
+neuron_count (Choice)
+{'default' 256, 'conditions' [], 'values' [256, 512, 1024], 'ordered' True}
+
+Search Running Trial #1
+
+Value             Best Value So Far Hyperparameter
+0.001             0.001             learning_rate
+0.2               0.2               dropout
+1024              1024              neuron_count
+3                 3                 tunerepochs
+0                 0                 tunerinitial_epoch
+2                 2                 tunerbracket
+0                 0                 tunerround
+
+WARNINGtensorflowFrom CUsersCristianovenvstensorflow-py312Libsite-packageskerassrcbackendcommonglobal_state.py82 The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+WARNINGtensorflowFrom CUsersCristianovenvstensorflow-py312Libsite-packageskerassrcbackendcommonglobal_state.py82 The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+Epoch 13
+148148 ━━━━━━━━━━━━━━━━━━━━ 249s 2sstep - accuracy 0.8282 - loss 1.4892 - val_accuracy 0.8931 - val_loss 0.2657
+Epoch 23
+148148 ━━━━━━━━━━━━━━━━━━━━ 228s 2sstep - accuracy 0.9232 - loss 0.1768 - val_accuracy 0.8798 - val_loss 0.2973
+Epoch 33
+148148 ━━━━━━━━━━━━━━━━━━━━ 243s 2sstep - accuracy 0.9385 - loss 0.1404 - val_accuracy 0.9466 - val_loss 0.1460
+WARNINGtensorflowFrom CUsersCristianovenvstensorflow-py312Libsite-packagestensorboardpluginshparamssummary.py190 The name tf.Summary is deprecated. Please use tf.compat.v1.Summary instead.
+
+WARNINGtensorflowFrom CUsersCristianovenvstensorflow-py312Libsite-packagestensorboardpluginshparamssummary.py190 The name tf.Summary is deprecated. Please use tf.compat.v1.Summary instead.
+
+
+Trial 1 Complete [00h 12m 07s]
+val_accuracy 0.9465649127960205
+
+Best val_accuracy So Far 0.9465649127960205
+Total elapsed time 00h 12m 07s
+
+Search Running Trial #2
+
+Value             Best Value So Far Hyperparameter
+0.0001            0.001             learning_rate
+0.1               0.2               dropout
+1024              1024              neuron_count
+3                 3                 tunerepochs
+0                 0                 tunerinitial_epoch
+2                 2                 tunerbracket
+0                 0                 tunerround
+
+Epoch 13
+148148 ━━━━━━━━━━━━━━━━━━━━ 250s 2sstep - accuracy 0.8567 - loss 0.3353 - val_accuracy 0.7920 - val_loss 0.4868
+Epoch 23
+148148 ━━━━━━━━━━━━━━━━━━━━ 239s 2sstep - accuracy 0.9386 - loss 0.1513 - val_accuracy 0.9122 - val_loss 0.2290
+Epoch 33
+148148 ━━━━━━━━━━━━━━━━━━━━ 248s 2sstep - accuracy 0.9466 - loss 0.1450 - val_accuracy 0.9141 - val_loss 0.2166
+
+Trial 2 Complete [00h 12m 21s]
+val_accuracy 0.9141221642494202
+
+Best val_accuracy So Far 0.9465649127960205
+Total elapsed time 00h 24m 27s
+
+Search Running Trial #3
+
+Value             Best Value So Far Hyperparameter
+0.01              0.001             learning_rate
+0.3               0.2               dropout
+1024              1024              neuron_count
+3                 3                 tunerepochs
+0                 0                 tunerinitial_epoch
+2                 2                 tunerbracket
+0                 0                 tunerround
+
+Epoch 13
+148148 ━━━━━━━━━━━━━━━━━━━━ 274s 2sstep - accuracy 0.8081 - loss 23.4785 - val_accuracy 0.9218 - val_loss 0.2268
+Epoch 23
+148148 ━━━━━━━━━━━━━━━━━━━━ 236s 2sstep - accuracy 0.8911 - loss 0.3660 - val_accuracy 0.9351 - val_loss 0.1817
+Epoch 33
+148148 ━━━━━━━━━━━━━━━━━━━━ 247s 2sstep - accuracy 0.9175 - loss 0.2778 - val_accuracy 0.8779 - val_loss 0.2417
+
+Trial 3 Complete [00h 12m 43s]
+val_accuracy 0.9351145029067993
+
+Best val_accuracy So Far 0.9465649127960205
+Total elapsed time 00h 37m 10s
+
+Search Running Trial #4
+
+Value             Best Value So Far Hyperparameter
+0.01              0.001             learning_rate
+0.2               0.2               dropout
+1024              1024              neuron_count
+3                 3                 tunerepochs
+0                 0                 tunerinitial_epoch
+2                 2                 tunerbracket
+0                 0                 tunerround
+
+Epoch 13
+148148 ━━━━━━━━━━━━━━━━━━━━ 300s 2sstep - accuracy 0.8102 - loss 19.6234 - val_accuracy 0.8760 - val_loss 0.3293
+Epoch 23
+148148 ━━━━━━━━━━━━━━━━━━━━ 239s 2sstep - accuracy 0.8933 - loss 0.3935 - val_accuracy 0.9008 - val_loss 0.2282
+Epoch 33
+148148 ━━━━━━━━━━━━━━━━━━━━ 199s 1sstep - accuracy 0.9113 - loss 0.3198 - val_accuracy 0.9008 - val_loss 0.2303
+
+Trial 4 Complete [00h 12m 27s]
+val_accuracy 0.9007633328437805
+
+Best val_accuracy So Far 0.9465649127960205
+Total elapsed time 00h 49m 37s
+
+Search Running Trial #5
+
+Value             Best Value So Far Hyperparameter
+0.001             0.001             learning_rate
+0.1               0.2               dropout
+512               1024              neuron_count
+3                 3                 tunerepochs
+0                 0                 tunerinitial_epoch
+2                 2                 tunerbracket
+0                 0                 tunerround
+
+Epoch 13
+148148 ━━━━━━━━━━━━━━━━━━━━ 131s 845msstep - accuracy 0.8454 - loss 0.8441 - val_accuracy 0.8645 - val_loss 0.3251
+Epoch 23
+148148 ━━━━━━━━━━━━━━━━━━━━ 113s 760msstep - accuracy 0.9311 - loss 0.1850 - val_accuracy 0.8683 - val_loss 0.3328
+Epoch 33
+148148 ━━━━━━━━━━━━━━━━━━━━ 117s 791msstep - accuracy 0.9440 - loss 0.1448 - val_accuracy 0.9351 - val_loss 0.1746
+
+Trial 5 Complete [00h 06m 08s]
+val_accuracy 0.9351145029067993
+
+Best val_accuracy So Far 0.9465649127960205
+Total elapsed time 00h 55m 45s
+
+Search Running Trial #6
+
+Value             Best Value So Far Hyperparameter
+0.001             0.001             learning_rate
+0.1               0.2               dropout
+256               1024              neuron_count
+3                 3                 tunerepochs
+0                 0                 tunerinitial_epoch
+2                 2                 tunerbracket
+0                 0                 tunerround
+
+Epoch 13
+148148 ━━━━━━━━━━━━━━━━━━━━ 100s 639msstep - accuracy 0.8452 - loss 1.0505 - val_accuracy 0.8321 - val_loss 0.4912
+Epoch 23
+148148 ━━━━━━━━━━━━━━━━━━━━ 94s 634msstep - accuracy 0.9363 - loss 0.1681 - val_accuracy 0.8645 - val_loss 0.3567
+Epoch 33
+148148 ━━━━━━━━━━━━━━━━━━━━ 93s 628msstep - accuracy 0.9425 - loss 0.1511 - val_accuracy 0.9427 - val_loss 0.1697
+
+Trial 6 Complete [00h 04m 52s]
+val_accuracy 0.9427480697631836
+
+Best val_accuracy So Far 0.9465649127960205
+Total elapsed time 01h 00m 37s
+
+Search Running Trial #7
+
+Value             Best Value So Far Hyperparameter
+0.0001            0.001             learning_rate
+0.2               0.2               dropout
+1024              1024              neuron_count
+3                 3                 tunerepochs
+0                 0                 tunerinitial_epoch
+2                 2                 tunerbracket
+0                 0                 tunerround
+
+Epoch 13
+148148 ━━━━━━━━━━━━━━━━━━━━ 249s 2sstep - accuracy 0.8825 - loss 0.3217 - val_accuracy 0.8626 - val_loss 0.3211
+Epoch 23
+148148 ━━━━━━━━━━━━━━━━━━━━ 226s 2sstep - accuracy 0.9414 - loss 0.1469 - val_accuracy 0.9046 - val_loss 0.2252
+Epoch 33
+148148 ━━━━━━━━━━━━━━━━━━━━ 232s 2sstep - accuracy 0.9529 - loss 0.1279 - val_accuracy 0.9256 - val_loss 0.2140
+
+Trial 7 Complete [00h 11m 52s]
+val_accuracy 0.9255725145339966
+
+Best val_accuracy So Far 0.9465649127960205
+Total elapsed time 01h 12m 29s
+
+Search Running Trial #8
+
+Value             Best Value So Far Hyperparameter
+0.001             0.001             learning_rate
+0.4               0.2               dropout
+512               1024              neuron_count
+3                 3                 tunerepochs
+0                 0                 tunerinitial_epoch
+2                 2                 tunerbracket
+0                 0                 tunerround
+
+Epoch 13
+148148 ━━━━━━━━━━━━━━━━━━━━ 132s 853msstep - accuracy 0.8347 - loss 1.2331 - val_accuracy 0.9408 - val_loss 0.1459
+Epoch 23
+148148 ━━━━━━━━━━━━━━━━━━━━ 110s 738msstep - accuracy 0.9232 - loss 0.1950 - val_accuracy 0.9046 - val_loss 0.2420
+Epoch 33
+148148 ━━━━━━━━━━━━━━━━━━━━ 109s 733msstep - accuracy 0.9382 - loss 0.1581 - val_accuracy 0.9046 - val_loss 0.2352
+
+Trial 8 Complete [00h 05m 57s]
+val_accuracy 0.9408397078514099
+
+Best val_accuracy So Far 0.9465649127960205
+Total elapsed time 01h 18m 26s
+
+Search Running Trial #9
+
+Value             Best Value So Far Hyperparameter
+0.001             0.001             learning_rate
+0.4               0.2               dropout
+256               1024              neuron_count
+3                 3                 tunerepochs
+0                 0                 tunerinitial_epoch
+2                 2                 tunerbracket
+0                 0                 tunerround
+
+Epoch 13
+148148 ━━━━━━━━━━━━━━━━━━━━ 108s 689msstep - accuracy 0.8380 - loss 0.7065 - val_accuracy 0.9351 - val_loss 0.1570
+Epoch 23
+148148 ━━━━━━━━━━━━━━━━━━━━ 98s 658msstep - accuracy 0.9265 - loss 0.1850 - val_accuracy 0.9466 - val_loss 0.1301
+Epoch 33
+148148 ━━━━━━━━━━━━━━━━━━━━ 91s 614msstep - accuracy 0.9415 - loss 0.1506 - val_accuracy 0.9332 - val_loss 0.1722
+
+Trial 9 Complete [00h 05m 02s]
+val_accuracy 0.9465649127960205
+
+Best val_accuracy So Far 0.9465649127960205
+Total elapsed time 01h 23m 28s
+
+Search Running Trial #10
+
+Value             Best Value So Far Hyperparameter
+0.0001            0.001             learning_rate
+0.1               0.2               dropout
+512               1024              neuron_count
+3                 3                 tunerepochs
+0                 0                 tunerinitial_epoch
+2                 2                 tunerbracket
+0                 0                 tunerround
+
+Epoch 13
+148148 ━━━━━━━━━━━━━━━━━━━━ 127s 820msstep - accuracy 0.8663 - loss 0.3144 - val_accuracy 0.8435 - val_loss 0.3728
+Epoch 23
+148148 ━━━━━━━━━━━━━━━━━━━━ 120s 804msstep - accuracy 0.9443 - loss 0.1533 - val_accuracy 0.9294 - val_loss 0.1905
+Epoch 33
+148148 ━━━━━━━━━━━━━━━━━━━━ 115s 771msstep - accuracy 0.9515 - loss 0.1207 - val_accuracy 0.8359 - val_loss 0.4049
+
+Trial 10 Complete [00h 06m 05s]
+val_accuracy 0.9293892979621887
+
+Best val_accuracy So Far 0.9465649127960205
+Total elapsed time 01h 29m 34s
+
+Search Running Trial #11
+
+Value             Best Value So Far Hyperparameter
+0.01              0.001             learning_rate
+0.4               0.2               dropout
+512               1024              neuron_count
+3                 3                 tunerepochs
+0                 0                 tunerinitial_epoch
+2                 2                 tunerbracket
+0                 0                 tunerround
+
+Epoch 13
+148148 ━━━━━━━━━━━━━━━━━━━━ 131s 844msstep - accuracy 0.8258 - loss 18.0008 - val_accuracy 0.9084 - val_loss 0.2245
+Epoch 23
+148148 ━━━━━━━━━━━━━━━━━━━━ 112s 755msstep - accuracy 0.8939 - loss 0.4193 - val_accuracy 0.8912 - val_loss 0.3753
+Epoch 33
+148148 ━━━━━━━━━━━━━━━━━━━━ 123s 829msstep - accuracy 0.8996 - loss 0.3894 - val_accuracy 0.9370 - val_loss 0.2238
+
+Trial 11 Complete [00h 06m 13s]
+val_accuracy 0.9370229244232178
+
+Best val_accuracy So Far 0.9465649127960205
+Total elapsed time 01h 35m 47s
+
+Search Running Trial #12
+
+Value             Best Value So Far Hyperparameter
+0.01              0.001             learning_rate
+0.1               0.2               dropout
+1024              1024              neuron_count
+3                 3                 tunerepochs
+0                 0                 tunerinitial_epoch
+2                 2                 tunerbracket
+0                 0                 tunerround
+
+Epoch 13
+148148 ━━━━━━━━━━━━━━━━━━━━ 255s 2sstep - accuracy 0.8123 - loss 19.6039 - val_accuracy 0.8912 - val_loss 0.2313
+Epoch 23
+148148 ━━━━━━━━━━━━━━━━━━━━ 247s 2sstep - accuracy 0.8942 - loss 0.3662 - val_accuracy 0.9370 - val_loss 0.2468
+Epoch 33
+148148 ━━━━━━━━━━━━━━━━━━━━ 237s 2sstep - accuracy 0.9122 - loss 0.2961 - val_accuracy 0.9294 - val_loss 0.2351
+
+Trial 12 Complete [00h 12m 29s]
+val_accuracy 0.9370229244232178
+
+Best val_accuracy So Far 0.9465649127960205
+Total elapsed time 01h 48m 16s
+
+Search Running Trial #13
+
+Value             Best Value So Far Hyperparameter
+0.001             0.001             learning_rate
+0.2               0.2               dropout
+1024              1024              neuron_count
+7                 3                 tunerepochs
+3                 0                 tunerinitial_epoch
+2                 2                 tunerbracket
+1                 0                 tunerround
+0000              None              tunertrial_id
+
+CUsersCristianovenvstensorflow-py312Libsite-packageskerassrcsavingsaving_lib.py719 UserWarning Skipping variable loading for optimizer 'rmsprop', because it has 2 variables whereas the saved optimizer has 6 variables. 
+  saveable.load_own_variables(weights_store.get(inner_path))
+Epoch 47
+148148 ━━━━━━━━━━━━━━━━━━━━ 316s 2sstep - accuracy 0.9480 - loss 0.1334 - val_accuracy 0.9027 - val_loss 0.2390
+Epoch 57
+148148 ━━━━━━━━━━━━━━━━━━━━ 272s 2sstep - accuracy 0.9538 - loss 0.1140 - val_accuracy 0.9485 - val_loss 0.1518
+Epoch 67
+148148 ━━━━━━━━━━━━━━━━━━━━ 239s 2sstep - accuracy 0.9539 - loss 0.1251 - val_accuracy 0.9695 - val_loss 0.0910
+Epoch 77
+148148 ━━━━━━━━━━━━━━━━━━━━ 244s 2sstep - accuracy 0.9563 - loss 0.1119 - val_accuracy 0.9618 - val_loss 0.0948
+
+Trial 13 Complete [00h 18m 01s]
+val_accuracy 0.9694656729698181
+
+Best val_accuracy So Far 0.9694656729698181
+Total elapsed time 02h 06m 17s
+
+Search Running Trial #14
+
+Value             Best Value So Far Hyperparameter
+0.001             0.001             learning_rate
+0.4               0.2               dropout
+256               1024              neuron_count
+7                 7                 tunerepochs
+3                 3                 tunerinitial_epoch
+2                 2                 tunerbracket
+1                 1                 tunerround
+0008              0000              tunertrial_id
+
+Epoch 47
+148148 ━━━━━━━━━━━━━━━━━━━━ 105s 668msstep - accuracy 0.9396 - loss 0.1613 - val_accuracy 0.9542 - val_loss 0.1336
+Epoch 57
+148148 ━━━━━━━━━━━━━━━━━━━━ 92s 623msstep - accuracy 0.9432 - loss 0.1476 - val_accuracy 0.9408 - val_loss 0.1802
+Epoch 67
+148148 ━━━━━━━━━━━━━━━━━━━━ 94s 633msstep - accuracy 0.9489 - loss 0.1287 - val_accuracy 0.9294 - val_loss 0.1821
+Epoch 77
+148148 ━━━━━━━━━━━━━━━━━━━━ 95s 640msstep - accuracy 0.9533 - loss 0.1216 - val_accuracy 0.9618 - val_loss 0.1118
+
+Trial 14 Complete [00h 06m 36s]
+val_accuracy 0.9618320465087891
+
+Best val_accuracy So Far 0.9694656729698181
+Total elapsed time 02h 12m 53s
+
+Search Running Trial #15
+
+Value             Best Value So Far Hyperparameter
+0.001             0.001             learning_rate
+0.1               0.2               dropout
+256               1024              neuron_count
+7                 7                 tunerepochs
+3                 3                 tunerinitial_epoch
+2                 2                 tunerbracket
+1                 1                 tunerround
+0005              0000              tunertrial_id
+
+Epoch 47
+148148 ━━━━━━━━━━━━━━━━━━━━ 103s 657msstep - accuracy 0.9447 - loss 0.1436 - val_accuracy 0.9122 - val_loss 0.2475
+Epoch 57
+148148 ━━━━━━━━━━━━━━━━━━━━ 95s 641msstep - accuracy 0.9614 - loss 0.1100 - val_accuracy 0.9389 - val_loss 0.1583
+Epoch 67
+148148 ━━━━━━━━━━━━━━━━━━━━ 93s 626msstep - accuracy 0.9539 - loss 0.1203 - val_accuracy 0.9065 - val_loss 0.2297
+Epoch 77
+148148 ━━━━━━━━━━━━━━━━━━━━ 95s 643msstep - accuracy 0.9612 - loss 0.1131 - val_accuracy 0.9676 - val_loss 0.1205
+
+Trial 15 Complete [00h 06m 29s]
+val_accuracy 0.9675572514533997
+
+Best val_accuracy So Far 0.9694656729698181
+Total elapsed time 02h 19m 23s
+
+Search Running Trial #16
+
+Value             Best Value So Far Hyperparameter
+0.001             0.001             learning_rate
+0.4               0.2               dropout
+512               1024              neuron_count
+7                 7                 tunerepochs
+3                 3                 tunerinitial_epoch
+2                 2                 tunerbracket
+1                 1                 tunerround
+0007              0000              tunertrial_id
+
+Epoch 47
+148148 ━━━━━━━━━━━━━━━━━━━━ 133s 863msstep - accuracy 0.9191 - loss 0.2158 - val_accuracy 0.9103 - val_loss 0.2470
+Epoch 57
+148148 ━━━━━━━━━━━━━━━━━━━━ 123s 825msstep - accuracy 0.9420 - loss 0.1572 - val_accuracy 0.9351 - val_loss 0.1882
+Epoch 67
+148148 ━━━━━━━━━━━━━━━━━━━━ 147s 981msstep - accuracy 0.9369 - loss 0.1445 - val_accuracy 0.9637 - val_loss 0.1159
+Epoch 77
+148148 ━━━━━━━━━━━━━━━━━━━━ 118s 792msstep - accuracy 0.9464 - loss 0.1337 - val_accuracy 0.8817 - val_loss 0.3405
+
+Trial 16 Complete [00h 08m 45s]
+val_accuracy 0.9637404680252075
+
+Best val_accuracy So Far 0.9694656729698181
+Total elapsed time 02h 28m 08s
+
+Search Running Trial #17
+
+Value             Best Value So Far Hyperparameter
+0.001             0.001             learning_rate
+0.2               0.2               dropout
+1024              1024              neuron_count
+20                7                 tunerepochs
+7                 3                 tunerinitial_epoch
+2                 2                 tunerbracket
+2                 1                 tunerround
+0012              0000              tunertrial_id
+
+Epoch 820
+148148 ━━━━━━━━━━━━━━━━━━━━ 340s 2sstep - accuracy 0.9524 - loss 0.1199 - val_accuracy 0.9427 - val_loss 0.1964
+Epoch 920
+148148 ━━━━━━━━━━━━━━━━━━━━ 275s 2sstep - accuracy 0.9568 - loss 0.1121 - val_accuracy 0.9351 - val_loss 0.1612
+Epoch 1020
+148148 ━━━━━━━━━━━━━━━━━━━━ 290s 2sstep - accuracy 0.9598 - loss 0.1076 - val_accuracy 0.9618 - val_loss 0.1388
+Epoch 1120
+148148 ━━━━━━━━━━━━━━━━━━━━ 292s 2sstep - accuracy 0.9600 - loss 0.1093 - val_accuracy 0.9618 - val_loss 0.1158
+Epoch 1220
+148148 ━━━━━━━━━━━━━━━━━━━━ 306s 2sstep - accuracy 0.9594 - loss 0.0991 - val_accuracy 0.9256 - val_loss 0.1987
+Epoch 1320
+148148 ━━━━━━━━━━━━━━━━━━━━ 296s 2sstep - accuracy 0.9625 - loss 0.1001 - val_accuracy 0.9714 - val_loss 0.0784
+Epoch 1420
+148148 ━━━━━━━━━━━━━━━━━━━━ 295s 2sstep - accuracy 0.9628 - loss 0.0946 - val_accuracy 0.9637 - val_loss 0.1051
+Epoch 1520
+148148 ━━━━━━━━━━━━━━━━━━━━ 324s 2sstep - accuracy 0.9617 - loss 0.1001 - val_accuracy 0.9466 - val_loss 0.1652
+Epoch 1620
+148148 ━━━━━━━━━━━━━━━━━━━━ 284s 2sstep - accuracy 0.9626 - loss 0.0950 - val_accuracy 0.9637 - val_loss 0.1142
+Epoch 1720
+148148 ━━━━━━━━━━━━━━━━━━━━ 292s 2sstep - accuracy 0.9667 - loss 0.0886 - val_accuracy 0.9714 - val_loss 0.1086
+Epoch 1820
+148148 ━━━━━━━━━━━━━━━━━━━━ 290s 2sstep - accuracy 0.9668 - loss 0.0848 - val_accuracy 0.9714 - val_loss 0.0903
+
+Trial 17 Complete [00h 54m 57s]
+val_accuracy 0.9713740348815918
+
+Best val_accuracy So Far 0.9713740348815918
+Total elapsed time 03h 23m 05s
+
+Search Running Trial #18
+
+Value             Best Value So Far Hyperparameter
+0.001             0.001             learning_rate
+0.1               0.2               dropout
+256               1024              neuron_count
+20                20                tunerepochs
+7                 7                 tunerinitial_epoch
+2                 2                 tunerbracket
+2                 2                 tunerround
+0014              0012              tunertrial_id
+
+Epoch 820
+148148 ━━━━━━━━━━━━━━━━━━━━ 106s 667msstep - accuracy 0.9559 - loss 0.1075 - val_accuracy 0.9637 - val_loss 0.0926
+Epoch 920
+148148 ━━━━━━━━━━━━━━━━━━━━ 94s 632msstep - accuracy 0.9664 - loss 0.0950 - val_accuracy 0.9027 - val_loss 0.2348
+Epoch 1020
+148148 ━━━━━━━━━━━━━━━━━━━━ 95s 641msstep - accuracy 0.9602 - loss 0.0953 - val_accuracy 0.9676 - val_loss 0.1057
+Epoch 1120
+148148 ━━━━━━━━━━━━━━━━━━━━ 93s 627msstep - accuracy 0.9629 - loss 0.0988 - val_accuracy 0.9370 - val_loss 0.1653
+Epoch 1220
+148148 ━━━━━━━━━━━━━━━━━━━━ 94s 638msstep - accuracy 0.9588 - loss 0.0914 - val_accuracy 0.9408 - val_loss 0.1652
+Epoch 1320
+148148 ━━━━━━━━━━━━━━━━━━━━ 96s 646msstep - accuracy 0.9663 - loss 0.0819 - val_accuracy 0.9771 - val_loss 0.0887
+Epoch 1420
+148148 ━━━━━━━━━━━━━━━━━━━━ 93s 629msstep - accuracy 0.9689 - loss 0.0833 - val_accuracy 0.9771 - val_loss 0.0842
+Epoch 1520
+148148 ━━━━━━━━━━━━━━━━━━━━ 95s 642msstep - accuracy 0.9705 - loss 0.0797 - val_accuracy 0.9733 - val_loss 0.0856
+Epoch 1620
+148148 ━━━━━━━━━━━━━━━━━━━━ 94s 635msstep - accuracy 0.9699 - loss 0.0820 - val_accuracy 0.9618 - val_loss 0.1267
+Epoch 1720
+148148 ━━━━━━━━━━━━━━━━━━━━ 94s 635msstep - accuracy 0.9673 - loss 0.0884 - val_accuracy 0.9485 - val_loss 0.1634
+Epoch 1820
+148148 ━━━━━━━━━━━━━━━━━━━━ 96s 646msstep - accuracy 0.9656 - loss 0.0869 - val_accuracy 0.9542 - val_loss 0.1543
+
+Trial 18 Complete [00h 17m 54s]
+val_accuracy 0.9770992398262024
+
+Best val_accuracy So Far 0.9770992398262024
+Total elapsed time 03h 40m 58s
+
+Search Running Trial #19
+
+Value             Best Value So Far Hyperparameter
+0.01              0.001             learning_rate
+0.1               0.1               dropout
+512               256               neuron_count
+7                 20                tunerepochs
+0                 7                 tunerinitial_epoch
+1                 2                 tunerbracket
+0                 2                 tunerround
+
+Epoch 17
+148148 ━━━━━━━━━━━━━━━━━━━━ 149s 966msstep - accuracy 0.8205 - loss 12.0458 - val_accuracy 0.8931 - val_loss 0.3593
+Epoch 27
+148148 ━━━━━━━━━━━━━━━━━━━━ 124s 835msstep - accuracy 0.8999 - loss 0.2959 - val_accuracy 0.8912 - val_loss 0.2244
+Epoch 37
+148148 ━━━━━━━━━━━━━━━━━━━━ 115s 770msstep - accuracy 0.9265 - loss 0.2543 - val_accuracy 0.8092 - val_loss 0.3417
+Epoch 47
+148148 ━━━━━━━━━━━━━━━━━━━━ 121s 819msstep - accuracy 0.9335 - loss 0.1935 - val_accuracy 0.9389 - val_loss 0.1615
+Epoch 57
+148148 ━━━━━━━━━━━━━━━━━━━━ 115s 775msstep - accuracy 0.9430 - loss 0.1572 - val_accuracy 0.8588 - val_loss 0.2931
+Epoch 67
+148148 ━━━━━━━━━━━━━━━━━━━━ 124s 835msstep - accuracy 0.9446 - loss 0.1871 - val_accuracy 0.9408 - val_loss 0.1789
+Epoch 77
+148148 ━━━━━━━━━━━━━━━━━━━━ 122s 824msstep - accuracy 0.9502 - loss 0.1402 - val_accuracy 0.9542 - val_loss 0.1395
+
+Trial 19 Complete [00h 14m 36s]
+val_accuracy 0.9541984796524048
+
+Best val_accuracy So Far 0.9770992398262024
+Total elapsed time 03h 55m 34s
+
+Search Running Trial #20
+
+Value             Best Value So Far Hyperparameter
+0.001             0.001             learning_rate
+0.2               0.1               dropout
+256               256               neuron_count
+7                 20                tunerepochs
+0                 7                 tunerinitial_epoch
+1                 2                 tunerbracket
+0                 2                 tunerround
+
+Epoch 17
+148148 ━━━━━━━━━━━━━━━━━━━━ 113s 719msstep - accuracy 0.8357 - loss 0.7394 - val_accuracy 0.8645 - val_loss 0.3287
+Epoch 27
+148148 ━━━━━━━━━━━━━━━━━━━━ 104s 702msstep - accuracy 0.9325 - loss 0.1777 - val_accuracy 0.9561 - val_loss 0.1371
+Epoch 37
+148148 ━━━━━━━━━━━━━━━━━━━━ 97s 653msstep - accuracy 0.9407 - loss 0.1445 - val_accuracy 0.9198 - val_loss 0.2001
+Epoch 47
+148148 ━━━━━━━━━━━━━━━━━━━━ 97s 657msstep - accuracy 0.9500 - loss 0.1336 - val_accuracy 0.9523 - val_loss 0.1343
+Epoch 57
+148148 ━━━━━━━━━━━━━━━━━━━━ 97s 655msstep - accuracy 0.9589 - loss 0.1147 - val_accuracy 0.9466 - val_loss 0.1501
+Epoch 67
+148148 ━━━━━━━━━━━━━━━━━━━━ 97s 657msstep - accuracy 0.9510 - loss 0.1308 - val_accuracy 0.9542 - val_loss 0.1429
+Epoch 77
+148148 ━━━━━━━━━━━━━━━━━━━━ 101s 683msstep - accuracy 0.9598 - loss 0.1050 - val_accuracy 0.9637 - val_loss 0.1289
+
+Trial 20 Complete [00h 12m 00s]
+val_accuracy 0.9637404680252075
+
+Best val_accuracy So Far 0.9770992398262024
+Total elapsed time 04h 07m 35s
+
+Search Running Trial #21
+
+Value             Best Value So Far Hyperparameter
+0.01              0.001             learning_rate
+0.4               0.1               dropout
+1024              256               neuron_count
+7                 20                tunerepochs
+0                 7                 tunerinitial_epoch
+1                 2                 tunerbracket
+0                 2                 tunerround
+
+Epoch 17
+148148 ━━━━━━━━━━━━━━━━━━━━ 366s 2sstep - accuracy 0.8161 - loss 23.5061 - val_accuracy 0.8511 - val_loss 0.6197
+Epoch 27
+148148 ━━━━━━━━━━━━━━━━━━━━ 270s 2sstep - accuracy 0.8943 - loss 0.4291 - val_accuracy 0.8397 - val_loss 0.7005
+Epoch 37
+148148 ━━━━━━━━━━━━━━━━━━━━ 295s 2sstep - accuracy 0.9034 - loss 0.3650 - val_accuracy 0.9218 - val_loss 0.2049
+Epoch 47
+148148 ━━━━━━━━━━━━━━━━━━━━ 315s 2sstep - accuracy 0.9223 - loss 0.3310 - val_accuracy 0.9523 - val_loss 0.1565
+Epoch 57
+148148 ━━━━━━━━━━━━━━━━━━━━ 281s 2sstep - accuracy 0.9179 - loss 0.3435 - val_accuracy 0.9351 - val_loss 0.1785
+Epoch 67
+148148 ━━━━━━━━━━━━━━━━━━━━ 292s 2sstep - accuracy 0.9192 - loss 0.2619 - val_accuracy 0.9351 - val_loss 0.1598
+Epoch 77
+148148 ━━━━━━━━━━━━━━━━━━━━ 379s 2sstep - accuracy 0.9288 - loss 0.2373 - val_accuracy 0.8569 - val_loss 0.4700
+
+Trial 21 Complete [00h 36m 49s]
+val_accuracy 0.9522900581359863
+
+Best val_accuracy So Far 0.9770992398262024
+Total elapsed time 04h 44m 23s
+
+Search Running Trial #22
+
+Value             Best Value So Far Hyperparameter
+0.0001            0.001             learning_rate
+0.5               0.1               dropout
+1024              256               neuron_count
+7                 20                tunerepochs
+0                 7                 tunerinitial_epoch
+1                 2                 tunerbracket
+0                 2                 tunerround
+
+Epoch 17
+148148 ━━━━━━━━━━━━━━━━━━━━ 383s 3sstep - accuracy 0.8633 - loss 0.3380 - val_accuracy 0.9160 - val_loss 0.2120
+Epoch 27
+148148 ━━━━━━━━━━━━━━━━━━━━ 304s 2sstep - accuracy 0.9375 - loss 0.1570 - val_accuracy 0.9313 - val_loss 0.1774
+Epoch 37
+148148 ━━━━━━━━━━━━━━━━━━━━ 298s 2sstep - accuracy 0.9509 - loss 0.1406 - val_accuracy 0.9542 - val_loss 0.1318
+Epoch 47
+148148 ━━━━━━━━━━━━━━━━━━━━ 281s 2sstep - accuracy 0.9475 - loss 0.1305 - val_accuracy 0.8760 - val_loss 0.3054
+Epoch 57
+148148 ━━━━━━━━━━━━━━━━━━━━ 309s 2sstep - accuracy 0.9496 - loss 0.1227 - val_accuracy 0.9599 - val_loss 0.1131
+Epoch 67
+148148 ━━━━━━━━━━━━━━━━━━━━ 283s 2sstep - accuracy 0.9562 - loss 0.1087 - val_accuracy 0.9637 - val_loss 0.0932
+Epoch 77
+148148 ━━━━━━━━━━━━━━━━━━━━ 289s 2sstep - accuracy 0.9565 - loss 0.1069 - val_accuracy 0.9466 - val_loss 0.1462
+
+Trial 22 Complete [00h 36m 04s]
+val_accuracy 0.9637404680252075
+
+Best val_accuracy So Far 0.9770992398262024
+Total elapsed time 05h 20m 27s
+
+Search Running Trial #23
+
+Value             Best Value So Far Hyperparameter
+0.01              0.001             learning_rate
+0.5               0.1               dropout
+1024              256               neuron_count
+7                 20                tunerepochs
+0                 7                 tunerinitial_epoch
+1                 2                 tunerbracket
+0                 2                 tunerround
+
+Epoch 17
+148148 ━━━━━━━━━━━━━━━━━━━━ 323s 2sstep - accuracy 0.8064 - loss 24.1160 - val_accuracy 0.9313 - val_loss 0.2896
+Epoch 27
+148148 ━━━━━━━━━━━━━━━━━━━━ 291s 2sstep - accuracy 0.8803 - loss 0.5711 - val_accuracy 0.7977 - val_loss 0.7378
+Epoch 37
+148148 ━━━━━━━━━━━━━━━━━━━━ 304s 2sstep - accuracy 0.8976 - loss 0.4035 - val_accuracy 0.9370 - val_loss 0.1842
+Epoch 47
+148148 ━━━━━━━━━━━━━━━━━━━━ 297s 2sstep - accuracy 0.9116 - loss 0.3739 - val_accuracy 0.9485 - val_loss 0.1653
+Epoch 57
+148148 ━━━━━━━━━━━━━━━━━━━━ 290s 2sstep - accuracy 0.9089 - loss 0.3538 - val_accuracy 0.9122 - val_loss 0.1981
+Epoch 67
+148148 ━━━━━━━━━━━━━━━━━━━━ 304s 2sstep - accuracy 0.9244 - loss 0.3087 - val_accuracy 0.9504 - val_loss 0.1844
+Epoch 77
+148148 ━━━━━━━━━━━━━━━━━━━━ 287s 2sstep - accuracy 0.9255 - loss 0.2828 - val_accuracy 0.9580 - val_loss 0.1317
+
+Trial 23 Complete [00h 35m 14s]
+val_accuracy 0.9580152630805969
+
+Best val_accuracy So Far 0.9770992398262024
+Total elapsed time 05h 55m 41s
+
+Search Running Trial #24
+
+Value             Best Value So Far Hyperparameter
+0.001             0.001             learning_rate
+0.1               0.1               dropout
+1024              256               neuron_count
+7                 20                tunerepochs
+0                 7                 tunerinitial_epoch
+1                 2                 tunerbracket
+0                 2                 tunerround
+
+Epoch 17
+148148 ━━━━━━━━━━━━━━━━━━━━ 313s 2sstep - accuracy 0.8367 - loss 1.3751 - val_accuracy 0.7977 - val_loss 0.4094
+Epoch 27
+148148 ━━━━━━━━━━━━━━━━━━━━ 308s 2sstep - accuracy 0.9256 - loss 0.1948 - val_accuracy 0.9237 - val_loss 0.1885
+Epoch 37
+148148 ━━━━━━━━━━━━━━━━━━━━ 330s 2sstep - accuracy 0.9375 - loss 0.1525 - val_accuracy 0.9027 - val_loss 0.2397
+Epoch 47
+148148 ━━━━━━━━━━━━━━━━━━━━ 294s 2sstep - accuracy 0.9482 - loss 0.1351 - val_accuracy 0.8282 - val_loss 0.4304
+Epoch 57
+148148 ━━━━━━━━━━━━━━━━━━━━ 289s 2sstep - accuracy 0.9524 - loss 0.1318 - val_accuracy 0.7519 - val_loss 0.6182
+Epoch 67
+148148 ━━━━━━━━━━━━━━━━━━━━ 310s 2sstep - accuracy 0.9554 - loss 0.1198 - val_accuracy 0.9294 - val_loss 0.1673
+Epoch 77
+148148 ━━━━━━━━━━━━━━━━━━━━ 295s 2sstep - accuracy 0.9589 - loss 0.1033 - val_accuracy 0.8874 - val_loss 0.2425
+
+Trial 24 Complete [00h 36m 03s]
+val_accuracy 0.9293892979621887
+
+Best val_accuracy So Far 0.9770992398262024
+Total elapsed time 06h 31m 44s
+
+Search Running Trial #25
+
+Value             Best Value So Far Hyperparameter
+0.001             0.001             learning_rate
+0.2               0.1               dropout
+256               256               neuron_count
+20                20                tunerepochs
+7                 7                 tunerinitial_epoch
+1                 2                 tunerbracket
+1                 2                 tunerround
+0019              0014              tunertrial_id
+
+Epoch 820
+148148 ━━━━━━━━━━━━━━━━━━━━ 110s 688msstep - accuracy 0.9531 - loss 0.1177 - val_accuracy 0.9466 - val_loss 0.1412
+Epoch 920
+148148 ━━━━━━━━━━━━━━━━━━━━ 95s 640msstep - accuracy 0.9605 - loss 0.0995 - val_accuracy 0.8034 - val_loss 0.5959
+Epoch 1020
+148148 ━━━━━━━━━━━━━━━━━━━━ 96s 647msstep - accuracy 0.9540 - loss 0.1190 - val_accuracy 0.9389 - val_loss 0.1635
+Epoch 1120
+148148 ━━━━━━━━━━━━━━━━━━━━ 97s 656msstep - accuracy 0.9625 - loss 0.0969 - val_accuracy 0.8855 - val_loss 0.3017
+Epoch 1220
+148148 ━━━━━━━━━━━━━━━━━━━━ 101s 683msstep - accuracy 0.9619 - loss 0.1047 - val_accuracy 0.9599 - val_loss 0.1331
+Epoch 1320
+148148 ━━━━━━━━━━━━━━━━━━━━ 96s 648msstep - accuracy 0.9688 - loss 0.0882 - val_accuracy 0.9580 - val_loss 0.1313
+Epoch 1420
+148148 ━━━━━━━━━━━━━━━━━━━━ 96s 649msstep - accuracy 0.9664 - loss 0.0907 - val_accuracy 0.9427 - val_loss 0.1716
+Epoch 1520
+148148 ━━━━━━━━━━━━━━━━━━━━ 97s 656msstep - accuracy 0.9662 - loss 0.1004 - val_accuracy 0.9389 - val_loss 0.1673
+Epoch 1620
+148148 ━━━━━━━━━━━━━━━━━━━━ 96s 650msstep - accuracy 0.9698 - loss 0.0893 - val_accuracy 0.8969 - val_loss 0.2682
+Epoch 1720
+148148 ━━━━━━━━━━━━━━━━━━━━ 97s 654msstep - accuracy 0.9635 - loss 0.0863 - val_accuracy 0.9332 - val_loss 0.1869
+
+Trial 25 Complete [00h 16m 41s]
+val_accuracy 0.9599236845970154
+
+Best val_accuracy So Far 0.9770992398262024
+Total elapsed time 06h 48m 25s
+
+Search Running Trial #26
+
+Value             Best Value So Far Hyperparameter
+0.0001            0.001             learning_rate
+0.5               0.1               dropout
+1024              256               neuron_count
+20                20                tunerepochs
+7                 7                 tunerinitial_epoch
+1                 2                 tunerbracket
+1                 2                 tunerround
+0021              0014              tunertrial_id
+
+Epoch 820
+148148 ━━━━━━━━━━━━━━━━━━━━ 338s 2sstep - accuracy 0.9543 - loss 0.1200 - val_accuracy 0.8550 - val_loss 0.4019
+Epoch 920
+148148 ━━━━━━━━━━━━━━━━━━━━ 324s 2sstep - accuracy 0.9595 - loss 0.1033 - val_accuracy 0.9046 - val_loss 0.2503
+Epoch 1020
+148148 ━━━━━━━━━━━━━━━━━━━━ 310s 2sstep - accuracy 0.9608 - loss 0.1042 - val_accuracy 0.9466 - val_loss 0.1539
+Epoch 1120
+148148 ━━━━━━━━━━━━━━━━━━━━ 288s 2sstep - accuracy 0.9625 - loss 0.0985 - val_accuracy 0.9141 - val_loss 0.2292
+Epoch 1220
+148148 ━━━━━━━━━━━━━━━━━━━━ 311s 2sstep - accuracy 0.9599 - loss 0.0996 - val_accuracy 0.9084 - val_loss 0.2577
+Epoch 1320
+148148 ━━━━━━━━━━━━━━━━━━━━ 292s 2sstep - accuracy 0.9585 - loss 0.1043 - val_accuracy 0.9332 - val_loss 0.1764
+Epoch 1420
+148148 ━━━━━━━━━━━━━━━━━━━━ 295s 2sstep - accuracy 0.9636 - loss 0.0998 - val_accuracy 0.9714 - val_loss 0.0952
+Epoch 1520
+148148 ━━━━━━━━━━━━━━━━━━━━ 283s 2sstep - accuracy 0.9664 - loss 0.0884 - val_accuracy 0.9141 - val_loss 0.2406
+Epoch 1620
+148148 ━━━━━━━━━━━━━━━━━━━━ 274s 2sstep - accuracy 0.9640 - loss 0.0897 - val_accuracy 0.9466 - val_loss 0.1654
+Epoch 1720
+148148 ━━━━━━━━━━━━━━━━━━━━ 293s 2sstep - accuracy 0.9636 - loss 0.0951 - val_accuracy 0.9389 - val_loss 0.1853
+Epoch 1820
+148148 ━━━━━━━━━━━━━━━━━━━━ 289s 2sstep - accuracy 0.9689 - loss 0.0831 - val_accuracy 0.8989 - val_loss 0.2585
+Epoch 1920
+148148 ━━━━━━━━━━━━━━━━━━━━ 299s 2sstep - accuracy 0.9578 - loss 0.1123 - val_accuracy 0.9695 - val_loss 0.1011
+
+Trial 26 Complete [01h 00m 06s]
+val_accuracy 0.9713740348815918
+
+Best val_accuracy So Far 0.9770992398262024
+Total elapsed time 07h 48m 31s
+
+Search Running Trial #27
+
+Value             Best Value So Far Hyperparameter
+0.0001            0.001             learning_rate
+0.2               0.1               dropout
+256               256               neuron_count
+20                20                tunerepochs
+0                 7                 tunerinitial_epoch
+0                 2                 tunerbracket
+0                 2                 tunerround
+
+Epoch 120
+148148 ━━━━━━━━━━━━━━━━━━━━ 111s 696msstep - accuracy 0.8650 - loss 0.2977 - val_accuracy 0.9275 - val_loss 0.1864
+Epoch 220
+148148 ━━━━━━━━━━━━━━━━━━━━ 96s 647msstep - accuracy 0.9448 - loss 0.1370 - val_accuracy 0.9046 - val_loss 0.2487
+Epoch 320
+148148 ━━━━━━━━━━━━━━━━━━━━ 97s 654msstep - accuracy 0.9481 - loss 0.1250 - val_accuracy 0.7920 - val_loss 0.5314
+Epoch 420
+148148 ━━━━━━━━━━━━━━━━━━━━ 99s 668msstep - accuracy 0.9550 - loss 0.1217 - val_accuracy 0.9141 - val_loss 0.2458
+Epoch 520
+148148 ━━━━━━━━━━━━━━━━━━━━ 101s 681msstep - accuracy 0.9586 - loss 0.1038 - val_accuracy 0.9408 - val_loss 0.1646
+Epoch 620
+148148 ━━━━━━━━━━━━━━━━━━━━ 97s 657msstep - accuracy 0.9609 - loss 0.1016 - val_accuracy 0.9198 - val_loss 0.2222
+Epoch 720
+148148 ━━━━━━━━━━━━━━━━━━━━ 101s 684msstep - accuracy 0.9645 - loss 0.0988 - val_accuracy 0.9561 - val_loss 0.1126
+Epoch 820
+148148 ━━━━━━━━━━━━━━━━━━━━ 99s 670msstep - accuracy 0.9645 - loss 0.0987 - val_accuracy 0.9103 - val_loss 0.2333
+Epoch 920
+148148 ━━━━━━━━━━━━━━━━━━━━ 106s 714msstep - accuracy 0.9676 - loss 0.0911 - val_accuracy 0.9256 - val_loss 0.1819
+Epoch 1020
+148148 ━━━━━━━━━━━━━━━━━━━━ 99s 665msstep - accuracy 0.9635 - loss 0.0942 - val_accuracy 0.9103 - val_loss 0.2267
+Epoch 1120
+148148 ━━━━━━━━━━━━━━━━━━━━ 98s 658msstep - accuracy 0.9732 - loss 0.0840 - val_accuracy 0.9408 - val_loss 0.1687
+Epoch 1220
+148148 ━━━━━━━━━━━━━━━━━━━━ 98s 660msstep - accuracy 0.9705 - loss 0.0798 - val_accuracy 0.8969 - val_loss 0.2687
+
+Trial 27 Complete [00h 20m 27s]
+val_accuracy 0.9561068415641785
+
+Best val_accuracy So Far 0.9770992398262024
+Total elapsed time 08h 08m 59s
+
+Search Running Trial #28
+
+Value             Best Value So Far Hyperparameter
+0.01              0.001             learning_rate
+0.5               0.1               dropout
+512               256               neuron_count
+20                20                tunerepochs
+0                 7                 tunerinitial_epoch
+0                 2                 tunerbracket
+0                 2                 tunerround
+
+Epoch 120
+148148 ━━━━━━━━━━━━━━━━━━━━ 160s 1sstep - accuracy 0.8145 - loss 16.1719 - val_accuracy 0.9256 - val_loss 0.2302
+Epoch 220
+148148 ━━━━━━━━━━━━━━━━━━━━ 131s 876msstep - accuracy 0.8893 - loss 0.4625 - val_accuracy 0.9313 - val_loss 0.2322
+Epoch 320
+148148 ━━━━━━━━━━━━━━━━━━━━ 125s 846msstep - accuracy 0.9029 - loss 0.3264 - val_accuracy 0.9122 - val_loss 0.3250
+Epoch 420
+148148 ━━━━━━━━━━━━━━━━━━━━ 142s 944msstep - accuracy 0.9133 - loss 0.3070 - val_accuracy 0.9427 - val_loss 0.2136
+Epoch 520
+148148 ━━━━━━━━━━━━━━━━━━━━ 117s 782msstep - accuracy 0.9229 - loss 0.3023 - val_accuracy 0.8626 - val_loss 0.2504
+Epoch 620
+148148 ━━━━━━━━━━━━━━━━━━━━ 129s 869msstep - accuracy 0.9131 - loss 0.3308 - val_accuracy 0.9485 - val_loss 0.2643
+Epoch 720
+148148 ━━━━━━━━━━━━━━━━━━━━ 116s 773msstep - accuracy 0.9207 - loss 0.2770 - val_accuracy 0.7099 - val_loss 0.3738
+Epoch 820
+148148 ━━━━━━━━━━━━━━━━━━━━ 127s 858msstep - accuracy 0.9028 - loss 0.2780 - val_accuracy 0.9504 - val_loss 0.2236
+Epoch 920
+148148 ━━━━━━━━━━━━━━━━━━━━ 115s 773msstep - accuracy 0.9339 - loss 0.2261 - val_accuracy 0.9351 - val_loss 0.1618
+Epoch 1020
+148148 ━━━━━━━━━━━━━━━━━━━━ 116s 784msstep - accuracy 0.9298 - loss 0.2704 - val_accuracy 0.9313 - val_loss 0.1887
+Epoch 1120
+148148 ━━━━━━━━━━━━━━━━━━━━ 121s 816msstep - accuracy 0.9288 - loss 0.2199 - val_accuracy 0.9542 - val_loss 0.1787
+Epoch 1220
+148148 ━━━━━━━━━━━━━━━━━━━━ 115s 773msstep - accuracy 0.9347 - loss 0.2085 - val_accuracy 0.9370 - val_loss 0.1669
+Epoch 1320
+148148 ━━━━━━━━━━━━━━━━━━━━ 116s 780msstep - accuracy 0.9251 - loss 0.2323 - val_accuracy 0.9504 - val_loss 0.2599
+Epoch 1420
+148148 ━━━━━━━━━━━━━━━━━━━━ 115s 779msstep - accuracy 0.9262 - loss 0.2435 - val_accuracy 0.9160 - val_loss 0.2423
+Epoch 1520
+148148 ━━━━━━━━━━━━━━━━━━━━ 122s 822msstep - accuracy 0.9305 - loss 0.2378 - val_accuracy 0.9618 - val_loss 0.1279
+Epoch 1620
+148148 ━━━━━━━━━━━━━━━━━━━━ 136s 921msstep - accuracy 0.9294 - loss 0.2135 - val_accuracy 0.9695 - val_loss 0.1976
+Epoch 1720
+148148 ━━━━━━━━━━━━━━━━━━━━ 116s 777msstep - accuracy 0.9394 - loss 0.2278 - val_accuracy 0.9198 - val_loss 0.2197
+Epoch 1820
+148148 ━━━━━━━━━━━━━━━━━━━━ 116s 780msstep - accuracy 0.9394 - loss 0.1876 - val_accuracy 0.9618 - val_loss 0.1582
+Epoch 1920
+148148 ━━━━━━━━━━━━━━━━━━━━ 115s 776msstep - accuracy 0.9254 - loss 0.1984 - val_accuracy 0.9198 - val_loss 0.1943
+Epoch 2020
+148148 ━━━━━━━━━━━━━━━━━━━━ 115s 779msstep - accuracy 0.9362 - loss 0.2204 - val_accuracy 0.9676 - val_loss 0.1395
+
+Trial 28 Complete [00h 41m 12s]
+val_accuracy 0.9694656729698181
+
+Best val_accuracy So Far 0.9770992398262024
+Total elapsed time 08h 50m 11s
+
+Search Running Trial #29
+
+Value             Best Value So Far Hyperparameter
+0.01              0.001             learning_rate
+0.2               0.1               dropout
+512               256               neuron_count
+20                20                tunerepochs
+0                 7                 tunerinitial_epoch
+0                 2                 tunerbracket
+0                 2                 tunerround
+
+Epoch 120
+148148 ━━━━━━━━━━━━━━━━━━━━ 141s 893msstep - accuracy 0.8163 - loss 13.4718 - val_accuracy 0.9294 - val_loss 0.1848
+Epoch 220
+148148 ━━━━━━━━━━━━━━━━━━━━ 123s 823msstep - accuracy 0.8974 - loss 0.4189 - val_accuracy 0.9332 - val_loss 0.2072
+Epoch 320
+148148 ━━━━━━━━━━━━━━━━━━━━ 119s 804msstep - accuracy 0.9264 - loss 0.2068 - val_accuracy 0.9179 - val_loss 0.2089
+Epoch 420
+148148 ━━━━━━━━━━━━━━━━━━━━ 124s 838msstep - accuracy 0.9366 - loss 0.1995 - val_accuracy 0.9466 - val_loss 0.1727
+Epoch 520
+148148 ━━━━━━━━━━━━━━━━━━━━ 118s 792msstep - accuracy 0.9435 - loss 0.1650 - val_accuracy 0.8206 - val_loss 0.2973
+Epoch 620
+148148 ━━━━━━━━━━━━━━━━━━━━ 118s 794msstep - accuracy 0.9318 - loss 0.2155 - val_accuracy 0.9256 - val_loss 0.1873
+Epoch 720
+148148 ━━━━━━━━━━━━━━━━━━━━ 117s 792msstep - accuracy 0.9420 - loss 0.1602 - val_accuracy 0.9332 - val_loss 0.3160
+Epoch 820
+148148 ━━━━━━━━━━━━━━━━━━━━ 118s 796msstep - accuracy 0.9397 - loss 0.1862 - val_accuracy 0.9313 - val_loss 0.1636
+Epoch 920
+148148 ━━━━━━━━━━━━━━━━━━━━ 118s 793msstep - accuracy 0.9422 - loss 0.1760 - val_accuracy 0.9370 - val_loss 0.1797
+
+Trial 29 Complete [00h 18m 39s]
+val_accuracy 0.9465649127960205
+
+Best val_accuracy So Far 0.9770992398262024
+Total elapsed time 09h 08m 50s
+
+Search Running Trial #30
+
+Value             Best Value So Far Hyperparameter
+0.01              0.001             learning_rate
+0.1               0.1               dropout
+256               256               neuron_count
+20                20                tunerepochs
+0                 7                 tunerinitial_epoch
+0                 2                 tunerbracket
+0                 2                 tunerround
+
+Epoch 120
+148148 ━━━━━━━━━━━━━━━━━━━━ 116s 724msstep - accuracy 0.8159 - loss 10.0714 - val_accuracy 0.9198 - val_loss 0.2372
+Epoch 220
+148148 ━━━━━━━━━━━━━━━━━━━━ 105s 712msstep - accuracy 0.9149 - loss 0.2773 - val_accuracy 0.9466 - val_loss 0.1606
+Epoch 320
+148148 ━━━━━━━━━━━━━━━━━━━━ 100s 672msstep - accuracy 0.9325 - loss 0.2231 - val_accuracy 0.8626 - val_loss 0.3098
+Epoch 420
+148148 ━━━━━━━━━━━━━━━━━━━━ 100s 678msstep - accuracy 0.9436 - loss 0.1739 - val_accuracy 0.9466 - val_loss 0.1715
+Epoch 520
+148148 ━━━━━━━━━━━━━━━━━━━━ 99s 670msstep - accuracy 0.9366 - loss 0.1812 - val_accuracy 0.9408 - val_loss 0.1644
+Epoch 620
+148148 ━━━━━━━━━━━━━━━━━━━━ 101s 680msstep - accuracy 0.9413 - loss 0.1929 - val_accuracy 0.9561 - val_loss 0.1324
+Epoch 720
+148148 ━━━━━━━━━━━━━━━━━━━━ 98s 662msstep - accuracy 0.9495 - loss 0.1536 - val_accuracy 0.7328 - val_loss 0.3973
+Epoch 820
+148148 ━━━━━━━━━━━━━━━━━━━━ 101s 680msstep - accuracy 0.9462 - loss 0.1898 - val_accuracy 0.9637 - val_loss 0.2123
+Epoch 920
+148148 ━━━━━━━━━━━━━━━━━━━━ 101s 682msstep - accuracy 0.9522 - loss 0.1578 - val_accuracy 0.9676 - val_loss 0.1705
+Epoch 1020
+148148 ━━━━━━━━━━━━━━━━━━━━ 101s 679msstep - accuracy 0.9582 - loss 0.1343 - val_accuracy 0.9542 - val_loss 0.2122
+Epoch 1120
+148148 ━━━━━━━━━━━━━━━━━━━━ 99s 670msstep - accuracy 0.9480 - loss 0.1301 - val_accuracy 0.9103 - val_loss 0.2776
+Epoch 1220
+148148 ━━━━━━━━━━━━━━━━━━━━ 98s 663msstep - accuracy 0.9495 - loss 0.1746 - val_accuracy 0.9523 - val_loss 0.1519
+Epoch 1320
+148148 ━━━━━━━━━━━━━━━━━━━━ 99s 666msstep - accuracy 0.9617 - loss 0.1369 - val_accuracy 0.9676 - val_loss 0.1421
+Epoch 1420
+148148 ━━━━━━━━━━━━━━━━━━━━ 101s 685msstep - accuracy 0.9465 - loss 0.1651 - val_accuracy 0.9714 - val_loss 0.0945
+Epoch 1520
+148148 ━━━━━━━━━━━━━━━━━━━━ 98s 662msstep - accuracy 0.9567 - loss 0.1343 - val_accuracy 0.9580 - val_loss 0.2199
+Epoch 1620
+148148 ━━━━━━━━━━━━━━━━━━━━ 99s 666msstep - accuracy 0.9533 - loss 0.1476 - val_accuracy 0.9714 - val_loss 0.1064
+Epoch 1720
+148148 ━━━━━━━━━━━━━━━━━━━━ 98s 658msstep - accuracy 0.9589 - loss 0.1024 - val_accuracy 0.9485 - val_loss 0.1198
+Epoch 1820
+148148 ━━━━━━━━━━━━━━━━━━━━ 98s 664msstep - accuracy 0.9579 - loss 0.1195 - val_accuracy 0.9504 - val_loss 0.1800
+Epoch 1920
+148148 ━━━━━━━━━━━━━━━━━━━━ 98s 664msstep - accuracy 0.9590 - loss 0.1136 - val_accuracy 0.9580 - val_loss 0.1334
+
+Trial 30 Complete [00h 32m 12s]
+val_accuracy 0.9713740348815918
+
+Best val_accuracy So Far 0.9770992398262024
+Total elapsed time 09h 41m 02s
+Results summary
+Results in ..hyperparameter_tuningpre_trained_model
+Showing 10 best trials
+Objective(name=val_accuracy, direction=max)
+
+Trial 0017 summary
+Hyperparameters
+learning_rate 0.001
+dropout 0.1
+neuron_count 256
+tunerepochs 20
+tunerinitial_epoch 7
+tunerbracket 2
+tunerround 2
+tunertrial_id 0014
+Score 0.9770992398262024
+
+Trial 0016 summary
+Hyperparameters
+learning_rate 0.001
+dropout 0.2
+neuron_count 1024
+tunerepochs 20
+tunerinitial_epoch 7
+tunerbracket 2
+tunerround 2
+tunertrial_id 0012
+Score 0.9713740348815918
+
+Trial 0025 summary
+Hyperparameters
+learning_rate 0.0001
+dropout 0.5
+neuron_count 1024
+tunerepochs 20
+tunerinitial_epoch 7
+tunerbracket 1
+tunerround 1
+tunertrial_id 0021
+Score 0.9713740348815918
+
+Trial 0029 summary
+Hyperparameters
+learning_rate 0.01
+dropout 0.1
+neuron_count 256
+tunerepochs 20
+tunerinitial_epoch 0
+tunerbracket 0
+tunerround 0
+Score 0.9713740348815918
+
+Trial 0012 summary
+Hyperparameters
+learning_rate 0.001
+dropout 0.2
+neuron_count 1024
+tunerepochs 7
+tunerinitial_epoch 3
+tunerbracket 2
+tunerround 1
+tunertrial_id 0000
+Score 0.9694656729698181
+
+Trial 0027 summary
+Hyperparameters
+learning_rate 0.01
+dropout 0.5
+neuron_count 512
+tunerepochs 20
+tunerinitial_epoch 0
+tunerbracket 0
+tunerround 0
+Score 0.9694656729698181
+
+Trial 0014 summary
+Hyperparameters
+learning_rate 0.001
+dropout 0.1
+neuron_count 256
+tunerepochs 7
+tunerinitial_epoch 3
+tunerbracket 2
+tunerround 1
+tunertrial_id 0005
+Score 0.9675572514533997
+
+Trial 0015 summary
+Hyperparameters
+learning_rate 0.001
+dropout 0.4
+neuron_count 512
+tunerepochs 7
+tunerinitial_epoch 3
+tunerbracket 2
+tunerround 1
+tunertrial_id 0007
+Score 0.9637404680252075
+
+Trial 0019 summary
+Hyperparameters
+learning_rate 0.001
+dropout 0.2
+neuron_count 256
+tunerepochs 7
+tunerinitial_epoch 0
+tunerbracket 1
+tunerround 0
+Score 0.9637404680252075
+
+Trial 0021 summary
+Hyperparameters
+learning_rate 0.0001
+dropout 0.5
+neuron_count 1024
+tunerepochs 7
+tunerinitial_epoch 0
+tunerbracket 1
+tunerround 0
+Score 0.9637404680252075
+
